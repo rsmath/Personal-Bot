@@ -34,6 +34,8 @@ I want this project to be a practice for working with modules and packages. For 
 
 I am going to be using Python for this project. Moreover, to conduct the webscraping, I will be using the selenium library instead of the webbrowser library because unlike webbrowser, selenium allows me to fill username and password fields to sign into different websites.
 
+Selenium library- [documentation](https://selenium-python.readthedocs.io/navigating.html)
+
 
 
 
