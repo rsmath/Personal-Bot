@@ -23,6 +23,20 @@ This is a personal project I am going to be making that will be focussing on doi
 
 I want this project to be a practice for working with modules and packages. For that, I am going to be resorting to using traditional .py style files (modules apparently) and learning how to make packages and access them using class hierarchy system in python. This will allow me to learn a proper project workflow I believe. 
 
+
+
+
+
+## Technology
+
+
+
+
+I am going to be using Python for this project. Moreover, to conduct the webscraping, I will be using the selenium library instead of the webbrowser library because unlike webbrowser, selenium allows me to fill username and password fields to sign into different websites.
+
+
+
+
 ## Tasks
 
 
@@ -75,15 +89,13 @@ I am in senior year of high school, still I believe that I can find enough time 
 
 
 
-## Import other jupyter notebooks
+## Importing modules
 
 
 
 
 
-I have resorted to using the import_ipynb module to be able to import other jupyter notebooks here. I installed it using pip.
+I have resorted to using the nomrmal .py python files which can be easily imported into a jupyter notebook for testinf. More about Technologies in the section above.
 
-The import_ipynb library uses the jupyter notebook official documentation code to do the backend work for me.
 
-1. import_ipynb [Documentation](https://pypi.org/project/import-ipynb/)
-2. Jupyter Notebook [Documentation](https://jupyter-notebook.readthedocs.io/en/latest/examples/Notebook/Importing%20Notebooks.html)
+1. Selenium library- [documentation](https://selenium-python.readthedocs.io/navigating.html)
