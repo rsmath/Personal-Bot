@@ -13,35 +13,21 @@ import time
 class Websites:
     
     def __init__(self):
-        self.url = ""
+        self.url = 'https://github.com/ramanshsharma2806/'
         self.checked_in = False
+         
+    def sign_in(self, url = None):
+        if url != None:
+            self.url = url            
         path_to_chromedriver = "/Users/ramanshsharma/Downloads/chromedriver"
-        driver = webdriver.Chrome(path_to_chromedriver)  # Optional argument, if not specified will search path.
-        driver.get('http://www.google.com/xhtml');
-        time.sleep(1) # Let the user actually see something!
+        driver = webdriver.Chrome(path_to_chromedriver)
+        driver.get(self.url);
         search_box = driver.find_element_by_name('q')
-        search_box.send_keys('ChromeDriver')
+        search_box.send_keys('Ramansh Sharma') # typing in the search bar
         search_box.submit()
-        time.sleep(1) # Let the user actually see something!
-        driver.quit()
-    
-    def sign_in(self, url):
-        self.url = url
-
-def a():
-    path_to_chromedriver = "/Users/ramanshsharma/Downloads/chromedriver"
-    driver = webdriver.Chrome(path_to_chromedriver)  # Optional argument, if not specified will search path.
-    driver.get('http://www.google.com/xhtml');
-    time.sleep(1) # Let the user actually see something!
-    search_box = driver.find_element_by_name('q')
-    search_box.send_keys('ChromeDriver')
-    search_box.submit()
-    time.sleep(1) # Let the user actually see something!
-    driver.quit()
-        
-schedule.every().minute.at(":5").do(a)
-    
+        time.sleep(5)
+        driver.close() # closing the test browser
 
 if __name__ == '__main__':
     website = Websites()
-    website.sign_in('')
+    website.sign_in()
