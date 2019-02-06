@@ -8,6 +8,6 @@ SOCIAL_MEDIA = ['https://twitter.com/', 'https://www.instagram.com/']
 
 CODING_MEDIA = ['https://github.com/ramanshsharma2806', 'https://www.kaggle.com/']
 
-BLOGS = ['https://what-if.xkcd.com/']
+BLOGS = ['https://what-if.xkcd.com/', 'https://xkcd.com/']
 
-SCHOOL = ['https://bxscience.edu/']
+SCHOOL = ['https://bxscience.edu/', 'https://thesciencesurvey.com/']
