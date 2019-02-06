@@ -1,14 +1,15 @@
 ''' 
     My thought process here. I need to do several tasks, I will work through them one by one.
-    I will also need to find some external web scrapping libraries to do some of them, so I will be doing that later on.
-    My first task for Jarvis will be finding if Randall Munroe has posted a new blog on his xkcd forum. Jarvis will provide me 
-    with the latest article on the xkcd blog. So I guess I will
-    need web scraping starting my first task. 
+    I will also need to find some external web scrapping libraries to do some of them.
+    Web scraping : beautifulsoup4 (import bs4)
+    Interacting with website : selenim
+    
 '''
 
-import webbrowser
-import websites as wb
-
+import time # for sleeping
+from authenticate import Websites
+from get_data import Data
+from links import CONST_EMAILS, SOCIAL_MEDIA, CODING_MEDIA, BLOGS, SCHOOL
 
 class Jarvis:
     '''

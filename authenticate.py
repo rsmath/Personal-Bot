@@ -15,10 +15,10 @@ class Websites:
     def __init__(self):
         self.url = 'https://github.com/ramanshsharma2806/'
         self.checked_in = False
-         
-    def sign_in(self, url = None):
+        
+    def sign_in(self, url = None): # keeps the website open
         if url != None:
-            self.url = url            
+            self.url = url
         path_to_chromedriver = "/Users/ramanshsharma/Downloads/chromedriver"
         driver = webdriver.Chrome(path_to_chromedriver)
         driver.get(self.url);
@@ -26,7 +26,6 @@ class Websites:
         search_box.send_keys('Ramansh Sharma') # typing in the search bar
         search_box.submit()
         time.sleep(5)
-        driver.close() # closing the test browser
 
 if __name__ == '__main__':
     website = Websites()

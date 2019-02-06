@@ -10,3 +10,4 @@ CODING_MEDIA = ['https://github.com/ramanshsharma2806', 'https://www.kaggle.com/
 
 BLOGS = ['https://what-if.xkcd.com/']
 
+SCHOOL = ['https://bxscience.edu/']
