@@ -1,7 +1,9 @@
 '''
-    I will be using beautifulsoup4 to get data from 
+    I will be using beautifulsoup4 and requests to get data from online forums
 '''
 
+# requests module will be used to download online files if any, but to also give raw HTML text to beautifulsoup4
+import requests
 
 # beautifulsoup4 will be used to collect data in this module
 import bs4
@@ -22,7 +24,7 @@ class Data:
         
     def get_from(self, media): # receive a link to sign in into
         # TODO : a social media name is given in string, then is signed into, and collected data from
-        self.connector_to_website[media]()
+        return self.connector_to_website[media]()
 
 def get_school():
     # TODO : get latest home page pics and articles from Bronx Science's website and the Science Survey website

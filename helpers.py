@@ -1,13 +1,13 @@
 '''
     This module provides some helpful functionst to parse commands from prompt
 '''
-
+import pandas
 def convert_to_command(comm):
     commands = {"t" : 'twitter',
                 "twitter" : 'twitter',
                 'insta' : 'instagram',
                 'instagram' : 'instagram',
-                'i' : 'instagra',
+                'i' : 'instagram',
                 "g" : 'github',
                 "git" : 'github',
                 "github" : 'github',
@@ -23,3 +23,7 @@ def convert_to_command(comm):
                 "school" : 'school'
                }
     return commands[comm.lower()]
+
+
+file = pandas.read_csv('secrets.csv')
+print(file)

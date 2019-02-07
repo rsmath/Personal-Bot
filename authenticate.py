@@ -13,7 +13,7 @@ class Websites:
     def __init__(self):
         self.url = 'https://github.com/ramanshsharma2806/'
         self.checked_in = False
-        self.path_to_chromedriver = "/Users/ramanshsharma/Downloads/chromedriver"
+        self.path_to_chromedriver = "/Users/ramanshsharma/Downloads/chromedriver"y
         self.chrome_options = webdriver.ChromeOptions() # to keep the opened browser open
         self.chrome_options.add_experimental_option("detach", True) # this keeps the opened browser open
         self.driver = webdriver.Chrome(self.path_to_chromedriver, chrome_options = self.chrome_options) # chrome_options added
