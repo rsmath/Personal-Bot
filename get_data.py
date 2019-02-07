@@ -20,7 +20,7 @@ class Data:
                                     "mail" : get_mail,
                                     "xkcd" : get_xkcd,
                                     "school" : get_school
-                                   }
+                                    }
         
     def get_from(self, media): # receive a link to sign in into
         # TODO : a social media name is given in string, then is signed into, and collected data from

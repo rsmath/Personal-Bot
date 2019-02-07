@@ -19,7 +19,17 @@ class Jarvis:
     def __init__(self):
         self.Website = Websites()
         self.Data = Data()
+        self.cmd = ''
         
-    def 
+    def begin(self, cmd):
+        self.cmd = cmd
 
 
+if __name__ == '__main__':
+    Bot = Jarvis()
+    flag = True
+    cmd = input()
+    while flag or cmd.lower() != 'end':
+        Bot.begin(cmd)
+        flag = False
+        cmd = input()
