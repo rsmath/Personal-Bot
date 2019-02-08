@@ -13,9 +13,7 @@ from links import CONST_EMAILS, SOCIAL_MEDIA, CODING_MEDIA, BLOGS, SCHOOL
 from helpers import convert_to_command as cts
 
 class Jarvis:
-    '''
-        Jarvis is the class for the bot. It will handle all the other classes and call upon their functions.
-    '''
+    
     def __init__(self):
         self.Website = Websites()
         self.Data = Data()

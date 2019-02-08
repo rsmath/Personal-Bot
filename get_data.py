@@ -8,6 +8,8 @@ import requests
 # beautifulsoup4 will be used to collect data in this module
 import bs4
 
+import os
+
 class Data:
     
     def __init__(self):
