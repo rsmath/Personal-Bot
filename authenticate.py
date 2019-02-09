@@ -24,7 +24,7 @@ class Websites:
             self.url = url       
         self.driver.get(self.url);
         search_box = self.driver.find_element_by_name('q')
-        search_box.send_keys('Ramansh Sharma') # typing in the search bar
+        search_box.send_keys('ramanshsharma2806') # typing in the search bar
         time.sleep(2)
         search_box.submit()
 
