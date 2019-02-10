@@ -1,6 +1,7 @@
-'''
+"""
     This module provides some helpful functionst to parse commands from prompt
-'''
+"""
+
 
 def convert_to_command(comm):
     commands = {"t" : 'twitter',
