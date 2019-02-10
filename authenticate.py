@@ -10,11 +10,8 @@ import time
 
 
 class Websites:
-
-
     def __init__(self):
         self.url = 'https://github.com/ramanshsharma2806/'
-        self.checked_in = False
         self.path_to_chromedriver = "/Users/ramanshsharma/Downloads/chromedriver"
         self.chrome_options = webdriver.ChromeOptions()     # to keep the opened browser open
         self.chrome_options.add_experimental_option("detach", True)     # this keeps the opened browser open
@@ -23,11 +20,12 @@ class Websites:
     def sign_in(self, url=None):        # keeps the website open with chrome_options
         if url is not None:
             self.url = url       
-        self.driver.get(self.url);
+        self.driver.get(self.url)
         search_box = self.driver.find_element_by_name('q')
         search_box.send_keys('ramanshsharma2806') # typing in the search bar
         time.sleep(2)
-        search_box.submit()
+        # search_box.submit()
+        search_box.send_keys(Keys.ENTER)
 
 
 if __name__ == '__main__':

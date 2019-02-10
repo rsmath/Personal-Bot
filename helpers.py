@@ -1,5 +1,5 @@
 """
-    This module provides some helpful functionst to parse commands from prompt
+    This module provides some helpful functions to parse commands from prompt
 """
 
 
