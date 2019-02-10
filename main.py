@@ -21,7 +21,7 @@ class Jarvis:
 
     def begin(self, cmd):
         # TODO : for any media command passed, sign in, then wait for other commands which refer to other functions
-
+        pass
 
 
 if __name__ == '__main__':
