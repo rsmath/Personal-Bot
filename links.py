@@ -10,6 +10,6 @@ CODING_MEDIA = ['https://github.com/ramanshsharma2806', 'https://www.kaggle.com/
 
 LINKEDIN = ['https://www.linkedin.com/']
 
-BLOGS = ['https://what-if.xkcd.com/', 'https://xkcd.com/']
+BLOGS = ['https://what-if.xkcd.com/', 'https://xkcd.com/']      # main is first, blog is second
 
 SCHOOL = ['https://bxscience.edu/', 'https://thesciencesurvey.com/']

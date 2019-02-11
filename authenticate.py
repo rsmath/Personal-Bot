@@ -19,7 +19,7 @@ class Websites:
     def sign_in(self, url=None):        # keeps the website open with chrome_options
         if url is not None:
             self.url = url
-        driver = webdriver.Chrome(self.path_to_chromedriver, chrome_options = self.chrome_options)      # chrome_options added
+        driver = webdriver.Chrome(self.path_to_chromedriver, chrome_options=self.chrome_options)      # chrome_options added
         driver.get(self.url)
         search_box = driver.find_element_by_name('q')
         search_box.send_keys('ramanshsharma2806')       # typing in the search bar
