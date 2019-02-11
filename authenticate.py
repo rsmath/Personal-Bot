@@ -4,6 +4,7 @@
     and password columns instead of expecting my accounts to be already signed in.
 """
 
+import pandas as pd
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 import time
