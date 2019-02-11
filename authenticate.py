@@ -22,10 +22,11 @@ class Websites:
             self.url = url
         driver = webdriver.Chrome(self.path_to_chromedriver, chrome_options=self.chrome_options)        # chrome_options added
         driver.get(self.url)
-        search_box = driver.find_element_by_name('q')
-        search_box.send_keys('ramanshsharma2806')       # typing in the search bar
-        time.sleep(2)
-        search_box.send_keys(Keys.ENTER)        # submitting the search box
+        sign_in_button = driver.find_element_by_class_name('HeaderMenu-link')
+        sign_in_button.click()
+        # search_box.send_keys('ramanshsharma2806')       # typing in the search bar
+        # time.sleep(2)
+        # search_box.send_keys(Keys.ENTER)        # submitting the search box
 
 
 if __name__ == '__main__':
