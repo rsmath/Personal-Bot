@@ -8,15 +8,14 @@ import requests
 # beautifulsoup4 will be used to collect data in this module
 import bs4
 
-import os
-
 
 class Data:
 
     def __init__(self):
         # TODO : Initiate variables
         self.media = ''
-        self.connector_to_website = {"twitter" : get_twitter,
+        self.connector_to_website = {
+                                    "twitter" : get_twitter,
                                     'instagram' : get_instagram,
                                     "github" : get_github,
                                     "kaggle" : get_kaggle,
@@ -25,8 +24,7 @@ class Data:
                                     "school" : get_school
                                     }
 
-
-def get_from(self, media): # receive a link to sign in into
+    def get_from(self, media): # receive a link to sign in into
         # TODO : a social media name is given in string, then is signed into, and collected data from
         return self.connector_to_website[media]()
 
