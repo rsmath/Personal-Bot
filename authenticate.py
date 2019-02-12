@@ -25,7 +25,14 @@ class Websites:
         driver.get(self.url)
         sign_in_button = driver.find_element_by_link_text('Sign in')
         sign_in_button.click()
-        
+        sign_in_button = driver.find_element_by_id('login_field')
+        sign_in_button.send_keys(self.file.iloc[1, 1])
+        time.sleep(1)
+        sign_in_button = driver.find_element_by_id('password')
+        time.sleep(1)
+        sign_in_button.send_keys(self.file.iloc[1, 2])
+        time.sleep(1)
+        sign_in_button.send_keys(Keys.RETURN)
 
 if __name__ == '__main__':
     website = Websites()
