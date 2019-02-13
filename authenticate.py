@@ -17,18 +17,18 @@ class Websites:
         self.chrome_options = webdriver.ChromeOptions()     # to keep the opened browser open
         self.chrome_options.add_experimental_option("detach", True)     # this keeps the opened browser open
         self.file = pd.read_csv('secrets.csv')
+        self.driver = webdriver.Chrome(self.path_to_chromedriver, chrome_options=self.chrome_options)        # chrome_options added
 
     def sign_in(self, url=None):        # keeps the website open with chrome_options
         if url is not None:
             self.url = url
-        driver = webdriver.Chrome(self.path_to_chromedriver, chrome_options=self.chrome_options)        # chrome_options added
-        driver.get(self.url)
-        sign_in_button = driver.find_element_by_link_text('Sign in')
+        self.driver.get(self.url)
+        sign_in_button = self.driver.find_element_by_link_text('Sign in')
         sign_in_button.click()
-        sign_in_button = driver.find_element_by_id('login_field')
+        sign_in_button = self.driver.find_element_by_id('login_field')
         sign_in_button.send_keys(self.file.iloc[1, 1])
         time.sleep(1)
-        sign_in_button = driver.find_element_by_id('password')
+        sign_in_button = self.driver.find_element_by_id('password')
         time.sleep(1)
         sign_in_button.send_keys(self.file.iloc[1, 2])
         time.sleep(1)
