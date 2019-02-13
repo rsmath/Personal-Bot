@@ -3,7 +3,7 @@
 """
 
 from links import CONST_EMAILS, SOCIAL_MEDIA, CODING_MEDIA, BLOGS, SCHOOL
-
+'''MAKE THE COMMANDS DICTIONARY CLASSWISE OBJECT SO IT CAN BE ACCESSED BY OTHER MODULES'''
 
 def command_to_link(comm):
     commands = {

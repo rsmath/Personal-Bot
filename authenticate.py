@@ -25,13 +25,14 @@ class Websites:
             self.url = url
         self.driver = webdriver.Chrome(self.path_to_chromedriver,
                                        chrome_options=self.chrome_options)  # chrome_options added
+        self.get_github()
 
     def get_school(self, spec):
         # TODO : either open school website or the sciencesurvey based on param
         pass
 
     def get_linkedin(self):
-        # TODO : sign intp linkedin
+        # TODO : sign into linkedin
         pass
 
     def get_twitter(self):
