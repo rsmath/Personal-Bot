@@ -34,45 +34,37 @@ class Websites:
         time.sleep(1)
         sign_in_button.send_keys(Keys.RETURN)
 
+    def get_school(self, spec):
+        # TODO : either open school website or the sciencesurvey based on param
+        pass
 
-def get_school(spec):
-    # TODO : either open school website or the sciencesurvey based on param
-    pass
+    def get_linkedin(self):
+        # TODO : sign intp linkedin
+        pass
 
+    def get_twitter(self):
+        # TODO : sign into twitter
+        pass
 
-def get_linkedin():
-    # TODO : sign intp linkedin
-    pass
+    def get_instagram(self):
+        # TODO : sign into instagram
+        pass
 
+    def get_github(self):
+        # TODO : sign into github
+        pass
 
-def get_twitter():
-    # TODO : sign into twitter
-    pass
+    def get_kaggle(self):
+        # TODO : sign into kaggle
+        pass
 
+    def get_mail(self, num):
+        # TODO : sign into the mail specified; 0 is bxsci, 1 is eps, 2 is personal gmail
+        pass
 
-def get_instagram():
-    # TODO : sign into instagram
-    pass
-
-
-def get_github():
-    # TODO : sign into github
-    pass
-
-
-def get_kaggle():
-    # TODO : sign into kaggle
-    pass
-
-
-def get_mail(num):
-    # TODO : sign into the mail specified; 0 is bxsci, 1 is eps, 2 is personal gmail
-    pass
-
-
-def get_xkcd(spec):
-    # TODO : just open the xkcd desired
-    pass
+    def get_xkcd(self, spec):
+        # TODO : just open the xkcd desired
+        pass
 
 
 if __name__ == '__main__':
