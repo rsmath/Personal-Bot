@@ -6,6 +6,7 @@
 
 import pandas as pd
 from selenium import webdriver
+import selenium.common.exceptions as errs
 from selenium.webdriver.common.keys import Keys
 import time
 
@@ -45,16 +46,21 @@ class Websites:
 
     def get_github(self):
         # TODO : sign into github
-        self.driver.get(self.url)
+        try:
+            self.driver.get(self.url)
+        except (errs.NoSuchElementException, errs.WebDriverException) as err:
+            print("Driver was not able to open the link. Error message {}".format(err))
+        time.sleep(2)
         sign_in_button = self.driver.find_element_by_link_text('Sign in')
         sign_in_button.click()
         sign_in_button = self.driver.find_element_by_id('login_field')
+        time.sleep(2)
         sign_in_button.send_keys(self.file.iloc[1, 1])
-        time.sleep(1)
+        time.sleep(2)
         sign_in_button = self.driver.find_element_by_id('password')
-        time.sleep(1)
+        time.sleep(2)
         sign_in_button.send_keys(self.file.iloc[1, 2])
-        time.sleep(1)
+        time.sleep(2)
         sign_in_button.send_keys(Keys.RETURN)
 
     def get_kaggle(self):
