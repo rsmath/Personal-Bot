@@ -40,6 +40,11 @@ def get_twitter():
     pass
 
 
+def get_linkedin():
+    # TODO : sign in and get data from the linkedin page; connections and possibly some top stories in the feed
+    pass
+
+
 def get_instagram():
     # TODO : get my followers list of names, following list of names, and pics from some accounts
     pass
