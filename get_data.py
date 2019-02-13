@@ -16,7 +16,7 @@ class Data:
         self.media = ''
         self.connector_to_website = {
                                     "twitter" : get_twitter,
-                                    'instagram' : get_instagram,
+                                    "instagram" : get_instagram,
                                     "github" : get_github,
                                     "kaggle" : get_kaggle,
                                     "mail" : get_mail,
