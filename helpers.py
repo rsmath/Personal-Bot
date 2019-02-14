@@ -5,21 +5,23 @@
 from links import CONST_EMAILS, SOCIAL_MEDIA, CODING_MEDIA, BLOGS, SCHOOL
 '''MAKE THE COMMANDS DICTIONARY CLASSWISE OBJECT SO IT CAN BE ACCESSED BY OTHER MODULES'''
 
+commands = {
+            'twitter': SOCIAL_MEDIA[0],
+            'instagram': SOCIAL_MEDIA[1],
+            'github': CODING_MEDIA[0],
+            'kaggle': CODING_MEDIA[1],
+            'mail': CONST_EMAILS,  # all emails opened
+            'mail0': CONST_EMAILS[0],
+            'mail1': CONST_EMAILS[1],
+            'mail2': CONST_EMAILS[2],
+            'xkcd': BLOGS[0],  # xkcd main
+            'blog': BLOGS[1],  # xkcd blog
+            'school': SCHOOL[0],  # bxsci main website
+            'sciencesurvey': SCHOOL[1]  # the science survey online newspaper
+            }
+
+
 def command_to_link(comm):
-    commands = {
-                'twitter' : SOCIAL_MEDIA[0],
-                'instagram' : SOCIAL_MEDIA[1],
-                'github' : CODING_MEDIA[0],
-                'kaggle' : CODING_MEDIA[1],
-                'mail' : CONST_EMAILS,      # all emails opened
-                'mail0' : CONST_EMAILS[0],
-                'mail1' : CONST_EMAILS[1],
-                'mail2' : CONST_EMAILS[2],
-                'xkcd' : BLOGS[0],      # xkcd main
-                'blog' : BLOGS[1],       # xkcd blog
-                'school' : SCHOOL[0],       # bxsci main website
-                'sciencesurvey' : SCHOOL[1]     # the science survey online newspaper
-                }
     return commands[comm.lower()]
 
 
