@@ -20,12 +20,11 @@ class Websites:
         self.file = pd.read_csv('secrets.csv')
         self.driver = None      # if instantiated here, then it will launch a browser when the object is instantiated
                                 # which is highly undesired
-        self.commands = commands        # the dict variable in helpers.py
 
     def sign_in(self, url=None):        # keeps the website open with chrome_options
         if url is not None:
             self.url = url
-        [item[0] for item in d.items() if target_value == item[1]][0]
+        media = link_to_media(self.url)
         self.driver = webdriver.Chrome(self.path_to_chromedriver,
                                        chrome_options=self.chrome_options)  # chrome_options added
         self.get_github()
@@ -73,6 +72,11 @@ class Websites:
     def get_xkcd(self, spec):
         # TODO : just open the xkcd desired
         pass
+
+
+def link_to_media(link):
+    # TODO : obtain the media associated with a link
+    return [item[0] for item in commands.items() if link == item[1]][0]
 
 
 if __name__ == '__main__':
