@@ -24,6 +24,7 @@ class Websites:
     def sign_in(self, url=None):        # keeps the website open with chrome_options
         if url is not None:
             self.url = url
+        [item[0] for item in d.items() if target_value == item[1]][0]
         self.driver = webdriver.Chrome(self.path_to_chromedriver,
                                        chrome_options=self.chrome_options)  # chrome_options added
         self.get_github()
@@ -46,10 +47,7 @@ class Websites:
 
     def get_github(self):
         # TODO : sign into github
-        try:
-            self.driver.get(self.url)
-        except (errs.NoSuchElementException, errs.WebDriverException) as err:
-            print("Driver was not able to open the link. Error message {}".format(err))
+        self.driver.get(self.url)
         time.sleep(2)
         sign_in_button = self.driver.find_element_by_link_text('Sign in')
         sign_in_button.click()
