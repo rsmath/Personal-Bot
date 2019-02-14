@@ -6,7 +6,7 @@
 
 import pandas as pd
 from selenium import webdriver
-import selenium.common.exceptions as errs
+from helpers import commands        # to convert link to command
 from selenium.webdriver.common.keys import Keys
 import time
 
@@ -20,6 +20,7 @@ class Websites:
         self.file = pd.read_csv('secrets.csv')
         self.driver = None      # if instantiated here, then it will launch a browser when the object is instantiated
                                 # which is highly undesired
+        self.commands = commands        # the dict variable in helpers.py
 
     def sign_in(self, url=None):        # keeps the website open with chrome_options
         if url is not None:
