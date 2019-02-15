@@ -18,8 +18,9 @@ class Websites:
         self.chrome_options = webdriver.ChromeOptions()     # to keep the opened browser open
         self.chrome_options.add_experimental_option("detach", True)     # this keeps the opened browser open
         self.file = pd.read_csv('secrets.csv')
-        self.driver = None      # if instantiated here, then it will launch a browser when the object is instantiated
-                                # which is highly undesired
+        self.driver = None
+        # if instantiated here, then it will launch a browser when the object is instantiated
+        # which is highly undesired
 
     def sign_in(self, url=None):        # keeps the website open with chrome_options
         if url is not None:
