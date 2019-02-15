@@ -22,17 +22,17 @@ class Websites:
         # if instantiated here, then it will launch a browser when the object is instantiated
         # which is highly undesired
         self.media_to_func = {
-                            'twitter': 
-                            'instagram': 
-                            'github': 
-                            'kaggle': 
-                            'mail': 
-                            'mail0': 
-                            'mail1': 
-                            'mail2': 
-                            'xkcd': 
-                            'blog': 
-                            'school': 
+                            'twitter': self.get_twitter,
+                            'instagram': 'instagram',
+                            'github':
+                            'kaggle':
+                            'mail':
+                            'mail0':
+                            'mail1':
+                            'mail2':
+                            'xkcd':
+                            'blog':
+                            'school':
                             'sciencesurvey'
                             }
 
