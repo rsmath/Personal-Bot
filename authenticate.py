@@ -21,6 +21,20 @@ class Websites:
         self.driver = None
         # if instantiated here, then it will launch a browser when the object is instantiated
         # which is highly undesired
+        self.media_to_func = {
+                            'twitter': 
+                            'instagram': 
+                            'github': 
+                            'kaggle': 
+                            'mail': 
+                            'mail0': 
+                            'mail1': 
+                            'mail2': 
+                            'xkcd': 
+                            'blog': 
+                            'school': 
+                            'sciencesurvey'
+                            }
 
     def sign_in(self, url=None):        # keeps the website open with chrome_options
         if url is not None:
