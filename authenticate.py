@@ -49,6 +49,8 @@ class Websites:
             self.media_to_func[media](spec=media)
         elif media == 'xkcd' or media == 'blog':
             self.media_to_func[media](spec=media)                           # XKCD OR BLOG
+        else:
+            self.media_to_func[media]()
 
     def get_school(self, spec):
         # TODO : either open school website or the sciencesurvey based on param
@@ -60,7 +62,18 @@ class Websites:
 
     def get_twitter(self):
         # TODO : sign into twitter
-        pass
+        self.driver.get(self.url)
+        time.sleep(2)
+        click_login = self.driver.find_element_by_link_text('Log in')
+        click_login.click()
+        give_username = self.driver.find_element_by_class_name('js-username-field')
+        give_username.send_keys(self.file.iloc[0, 1])
+        time.sleep(2)
+        give_password = self.driver.find_element_by_class_name('js-password-field')
+        give_password.send_keys(self.file.iloc[0, 2])
+        time.sleep(2)
+        give_password.send_keys(Keys.RETURN)
+
 
     def get_instagram(self):
         # TODO : sign into instagram
