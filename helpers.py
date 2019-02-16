@@ -26,7 +26,7 @@ def command_to_link(comm):
 
 
 def convert_to_command(comm):
-    commands = {
+    commands_local = {
                 "t" : 'twitter',
                 "twitter" : 'twitter',
                 'insta' : 'instagram',
@@ -54,4 +54,4 @@ def convert_to_command(comm):
                 "s news" : 'sciencesurvey',
                 "school news" : 'sciencesurvey'
                 }
-    return commands[comm.lower()]
+    return commands_local[comm.lower()]

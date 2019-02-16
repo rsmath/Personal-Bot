@@ -26,14 +26,14 @@ class Websites:
                             'instagram': self.get_instagram,
                             'github': self.get_github,
                             'kaggle': self.get_kaggle,
-                            'mail': self.get_mail,
-                            'mail0': self.get_mail,
-                            'mail1': self.get_mail,
-                            'mail2':self.get_mail,
+                            'mail': self.get_mail,      # open all the emails
+                            'mail0': self.get_mail,     # open bxsci email
+                            'mail1': self.get_mail,     # open eps email
+                            'mail2':self.get_mail,      # open personal gmail
                             'xkcd': self.get_xkcd,
                             'blog': self.get_xkcd,
-                            'school': self.get_school,
-                            'sciencesurvey': self.get_school
+                            'school': self.get_school,      # open the school website
+                            'sciencesurvey': self.get_school        # open the sciencesurvey online newspaper
                             }
 
     def sign_in(self, url=None):        # keeps the website open with chrome_options
@@ -81,11 +81,11 @@ class Websites:
         pass
 
     def get_mail(self, num):
-        # TODO : sign into the mail specified; 0 is bxsci, 1 is eps, 2 is personal gmail
+        # TODO : sign into the mail specified; 0 is bxsci, 1 is eps, 2 is personal gmail, if no num, then all
         pass
 
     def get_xkcd(self, spec):
-        # TODO : just open the xkcd desired
+        # TODO : just open the xkcd desired, either the blog or the comics
         pass
 
 
