@@ -23,17 +23,17 @@ class Websites:
         # which is highly undesired
         self.media_to_func = {
                             'twitter': self.get_twitter,
-                            'instagram': 'instagram',
-                            'github':
-                            'kaggle':
-                            'mail':
-                            'mail0':
-                            'mail1':
-                            'mail2':
-                            'xkcd':
-                            'blog':
-                            'school':
-                            'sciencesurvey'
+                            'instagram': self.get_instagram,
+                            'github': self.get_github,
+                            'kaggle': self.get_kaggle,
+                            'mail': self.get_mail,
+                            'mail0': self.get_mail,
+                            'mail1': self.get_mail,
+                            'mail2':self.get_mail,
+                            'xkcd': self.get_xkcd,
+                            'blog': self.get_xkcd,
+                            'school': self.get_school,
+                            'sciencesurvey': self.get_school
                             }
 
     def sign_in(self, url=None):        # keeps the website open with chrome_options
