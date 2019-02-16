@@ -74,7 +74,6 @@ class Websites:
         time.sleep(2)
         give_password.send_keys(Keys.RETURN)
 
-
     def get_instagram(self):
         # TODO : sign into instagram
         pass
