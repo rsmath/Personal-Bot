@@ -42,7 +42,8 @@ class Websites:
         media = link_to_media(self.url)
         self.driver = webdriver.Chrome(self.path_to_chromedriver,
                                        chrome_options=self.chrome_options)  # chrome_options added
-        self.get_github()
+        # TODO : in order to pass in certain params to the functions, I need explicit cases mentioned here
+        self.media_to_func[media]()
 
     def get_school(self, spec):
         # TODO : either open school website or the sciencesurvey based on param
