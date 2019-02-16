@@ -33,7 +33,7 @@ if __name__ == '__main__':
     Bot = Jarvis()
     flag = True
     cmd = input()
-    while cmd.lower() != 'end' and cmd is not None:
+    while (cmd.lower() != 'end' or cmd.lower() != 'e') and cmd is not None:
         flag = False
         Bot.begin(cmd)
         cmd = input()

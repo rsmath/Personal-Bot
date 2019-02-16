@@ -1,7 +1,7 @@
 """
     This module is for authenticating (signing in) into the various online places that I need to open and get data from.
-    This will be done with the help of selenium library, as unlike the webbrowser library, it allows me to fill out username 
-    and password columns instead of expecting my accounts to be already signed in.
+    This will be done with the help of selenium library, as unlike the webbrowser library, it allows me to fill out
+    username and password columns instead of expecting my accounts to be already signed in.
 """
 
 import pandas as pd
@@ -54,14 +54,23 @@ class Websites:
 
     def get_school(self, spec):
         # TODO : either open school website or the sciencesurvey based on param
+        # if check_if_none(self.driver):
+        #     body = self.driver.find_element_by_tag_name("body")
+        #     body.send_keys(Keys.CONTROL + 't')
         pass
 
     def get_linkedin(self):
         # TODO : sign into linkedin
+        # if check_if_none(self.driver):
+        #     body = self.driver.find_element_by_tag_name("body")
+        #     body.send_keys(Keys.CONTROL + 't')
         pass
 
     def get_twitter(self):
         # TODO : sign into twitter
+        # if check_if_none(self.driver):
+        #     body = self.driver.find_element_by_tag_name("body")
+        #     body.send_keys(Keys.CONTROL + 't')
         self.driver.get(self.url)
         time.sleep(2)
         click_login = self.driver.find_element_by_link_text('Log in')
@@ -76,10 +85,16 @@ class Websites:
 
     def get_instagram(self):
         # TODO : sign into instagram
+        # if check_if_none(self.driver):
+        #     body = self.driver.find_element_by_tag_name("body")
+        #     body.send_keys(Keys.CONTROL + 't')
         pass
 
     def get_github(self):
         # TODO : sign into github
+        # if check_if_none(self.driver):
+        #     body = self.driver.find_element_by_tag_name("body")
+        #     body.send_keys(Keys.CONTROL + 't')
         self.driver.get(self.url)
         time.sleep(2)
         sign_in_button = self.driver.find_element_by_link_text('Sign in')
@@ -96,20 +111,33 @@ class Websites:
 
     def get_kaggle(self):
         # TODO : sign into kaggle
+        # if check_if_none(self.driver):
+        #     body = self.driver.find_element_by_tag_name("body")
+        #     body.send_keys(Keys.CONTROL + 't')
         pass
 
     def get_mail(self, num=None):
         # TODO : sign into the mail specified; 0 is bxsci, 1 is eps, 2 is personal gmail, if no num, then all
+        # if check_if_none(self.driver):
+        #     body = self.driver.find_element_by_tag_name("body")
+        #     body.send_keys(Keys.CONTROL + 't')
         pass
 
     def get_xkcd(self, spec):
         # TODO : just open the xkcd desired, either the blog or the comics
+        # if check_if_none(self.driver):
+        #     body = self.driver.find_element_by_tag_name("body")
+        #     body.send_keys(Keys.CONTROL + 't')
         pass
 
 
 def link_to_media(link):
     # TODO : obtain the media associated with a link
     return [item[0] for item in commands.items() if link == item[1]][0]
+
+
+# def check_if_none(driver):
+#     return not (driver is None)
 
 
 if __name__ == '__main__':

@@ -1,5 +1,5 @@
 """
-    This module provides some helpful functions to parse commands from prompt
+    This module provides some helpful functions and variables to parse commands from prompt
 """
 
 from links import CONST_EMAILS, SOCIAL_MEDIA, CODING_MEDIA, BLOGS, SCHOOL
