@@ -116,7 +116,7 @@ class Websites:
         #     body.send_keys(Keys.CONTROL + 't')
         self.driver.get(self.url)
         time.sleep(2)
-        click_login = self.driver.find_element_by_class_name('site-header-react__cookies-notice-desktop')
+        click_login = self.driver.find_element_by_class_name('button--small')
         click_login.click()
         give_username = self.driver.find_element_by_id('username-input-text')
         give_username.send_keys(self.file.iloc[4, 1])
@@ -124,7 +124,8 @@ class Websites:
         give_password = self.driver.find_element_by_id('password-input-text')
         give_password.send_keys(self.file.iloc[4, 2])
         time.sleep(2)
-        give_password.send_keys(Keys.RETURN)
+        click_sign_in = self.driver.find_element_by_link_text('Sign in')
+        click_sign_in.click()
 
     def get_mail(self, num=None):
         # TODO : sign into the mail specified; 0 is bxsci, 1 is eps, 2 is personal gmail, if no num, then all
