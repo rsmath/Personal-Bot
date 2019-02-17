@@ -114,7 +114,17 @@ class Websites:
         # if check_if_none(self.driver):
         #     body = self.driver.find_element_by_tag_name("body")
         #     body.send_keys(Keys.CONTROL + 't')
-        pass
+        self.driver.get(self.url)
+        time.sleep(2)
+        click_login = self.driver.find_element_by_link_text('Sign in')
+        click_login.click()
+        give_username = self.driver.find_element_by_id_name('username-input-text')
+        give_username.send_keys(self.file.iloc[0, 1])
+        time.sleep(2)
+        give_password = self.driver.find_element_by_id_name('password-input-text')
+        give_password.send_keys(self.file.iloc[0, 2])
+        time.sleep(2)
+        give_password.send_keys(Keys.RETURN)
 
     def get_mail(self, num=None):
         # TODO : sign into the mail specified; 0 is bxsci, 1 is eps, 2 is personal gmail, if no num, then all
