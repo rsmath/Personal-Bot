@@ -29,6 +29,11 @@ class Jarvis:
         self.data.get_from(ctc(cmd))
 
 
+def initial_print(cmd):
+
+    print('Jarvis Bot was initiated.\nCommand was passed')
+
+
 if __name__ == '__main__':
     Bot = Jarvis()
     cmd = input()
