@@ -30,7 +30,7 @@ class Jarvis:
 
 
 def format_print(cmd):
-    print(f'Command that was passed: {cmd}')
+    print(f'Command that was passed: {ctc(cmd)}')
     if cmd is None:
         print('Please pass in a valid command')
 
@@ -46,3 +46,4 @@ if __name__ == '__main__':
         format_print(cmd)
         Bot.begin(cmd)
         cmd = input('\nEnter your command here: ')
+    print('Thank you for using Jarvis Bot. Execution terminated.')
