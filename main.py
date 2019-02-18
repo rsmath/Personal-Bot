@@ -29,14 +29,19 @@ class Jarvis:
         self.data.get_from(ctc(cmd))
 
 
-def initial_print(cmd):
-
-    print('Jarvis Bot was initiated.\nCommand was passed')
+def warning_print(cmd):
+    print(f'Jarvis Bot was initiated.\nCommand that was passed: {cmd}')
+    if cmd is None:
+        print('Please pass in a valid command')
 
 
 if __name__ == '__main__':
     Bot = Jarvis()
-    cmd = input()
-    while cmd.lower() != 'end' and cmd is not None:
+    print('You have initiated the Jarvis Bot. Pass in a valid command to sign in a media and open the browser with it.')
+    cmd = input('\nEnter your command here: ')
+    while cmd is None:
+        warning_print(cmd)
+        cmd = input()
+    while cmd.lower() != 'end':
         Bot.begin(cmd)
         cmd = input()
