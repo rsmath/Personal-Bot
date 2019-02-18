@@ -41,8 +41,8 @@ if __name__ == '__main__':
     cmd = input('\nEnter your command here: ')
     while cmd is None:
         format_print(cmd)
-        cmd = input()
+        cmd = input('\nEnter your command here: ')
     while cmd.lower() != 'end':
         format_print(cmd)
         Bot.begin(cmd)
-        cmd = input()
+        cmd = input('\nEnter your command here: ')
