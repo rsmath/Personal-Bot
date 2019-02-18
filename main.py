@@ -42,8 +42,8 @@ if __name__ == '__main__':
     while cmd is None:
         format_print(cmd)
         cmd = input('\nEnter your command here: ')
-    while cmd.lower() != 'end':
+    while cmd.lower() != 'end' and cmd.lower() != 'e':
         format_print(cmd)
         Bot.begin(cmd)
         cmd = input('\nEnter your command here: ')
-    print('Thank you for using Jarvis Bot. Execution terminated.')
+    print('\nThank you for using Jarvis Bot.\nExecution terminated.')
