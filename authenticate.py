@@ -55,8 +55,8 @@ class Websites:
     def get_school(self, spec):
         # TODO : either open school website or the sciencesurvey based on param
         # if check_if_none(self.driver):
-        #     body = self.driver.find_element_by_tag_name("body")
-        #     body.send_keys(Keys.CONTROL + 't')
+        self.driver.execute_script(f'''window.open({str(self.url)}, "_blank");''')
+
         pass
 
     def get_linkedin(self):
@@ -147,8 +147,8 @@ def link_to_media(link):
     return [item[0] for item in commands.items() if link == item[1]][0]
 
 
-# def check_if_none(driver):
-#     return not (driver is None)
+def check_if_none(driver):
+    return not (driver is None)
 
 
 if __name__ == '__main__':
