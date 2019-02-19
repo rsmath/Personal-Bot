@@ -12,6 +12,7 @@ import time     # for sleeping
 from authenticate import Websites
 from get_data import Data
 from helpers import convert_to_command as ctc, command_to_link as ctl
+from helpers import input_commands
 
 
 class Jarvis:
@@ -30,7 +31,7 @@ class Jarvis:
 
 
 def format_print(cmd = None):
-    if cmd is None or cmd == '':
+    if cmd is None or cmd not in input_commands.keys():
         print('\nPlease pass in a valid command')
         return
     print(f'Command that was passed: {ctc(cmd)}')
@@ -40,11 +41,11 @@ if __name__ == '__main__':
     Bot = Jarvis()
     print('You have initiated the Jarvis Bot. Pass in a valid command to sign in a media and open the browser with it.')
     cmd = input('\nEnter your command here: ')
-    while cmd is None or cmd == '':
+    while cmd is None or cmd not in input_commands.keys():
         format_print()
         cmd = input('\nEnter your command here: ')
     while cmd.lower() != 'end' and cmd.lower() != 'e':
         format_print(cmd)
         Bot.begin(cmd)
         cmd = input('\nEnter your command here: ')
-    print('\nThank you for using Jarvis Bot.\nExecution terminated.')
+    print('\nThank you for using Jarvis.\nExecution terminated.')

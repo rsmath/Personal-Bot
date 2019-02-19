@@ -20,13 +20,7 @@ commands = {
             'sciencesurvey': SCHOOL[1]  # the science survey online newspaper
             }
 
-
-def command_to_link(comm):
-    return commands[comm.lower()]
-
-
-def convert_to_command(comm):
-    commands_local = {
+input_commands = {
                 "t" : 'twitter',
                 "twitter" : 'twitter',
                 'insta' : 'instagram',
@@ -54,4 +48,10 @@ def convert_to_command(comm):
                 "s news" : 'sciencesurvey',
                 "school news" : 'sciencesurvey'
                 }
-    return commands_local[comm.lower()]
+
+def command_to_link(comm):
+    return commands[comm.lower()]
+
+
+def convert_to_command(comm):
+    return input_commands[comm.lower()]
