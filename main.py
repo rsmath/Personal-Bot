@@ -29,10 +29,11 @@ class Jarvis:
         self.data.get_from(ctc(cmd))
 
 
-def format_print(cmd):
-    print(f'Command that was passed: {ctc(cmd)}')
+def format_print(cmd = None):
     if cmd is None or cmd == '':
-        print('Please pass in a valid command')
+        print('\nPlease pass in a valid command')
+        return
+    print(f'Command that was passed: {ctc(cmd)}')
 
 
 if __name__ == '__main__':
@@ -40,7 +41,7 @@ if __name__ == '__main__':
     print('You have initiated the Jarvis Bot. Pass in a valid command to sign in a media and open the browser with it.')
     cmd = input('\nEnter your command here: ')
     while cmd is None or cmd == '':
-        format_print(cmd)
+        format_print()
         cmd = input('\nEnter your command here: ')
     while cmd.lower() != 'end' and cmd.lower() != 'e':
         format_print(cmd)
