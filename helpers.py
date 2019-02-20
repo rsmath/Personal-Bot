@@ -2,18 +2,19 @@
     This module provides some helpful functions and variables to parse commands from prompt
 """
 
-from links import CONST_EMAILS, SOCIAL_MEDIA, CODING_MEDIA, BLOGS, SCHOOL
+from links import CONST_EMAILS, SOCIAL_MEDIA, CODING_MEDIA, LINKEDIN, BLOGS, SCHOOL
 '''MAKE THE COMMANDS DICTIONARY CLASSWIDE OBJECT SO IT CAN BE ACCESSED BY OTHER MODULES'''
 
 commands = {
             'twitter': SOCIAL_MEDIA[0],
             'instagram': SOCIAL_MEDIA[1],
             'github': CODING_MEDIA[0],
+            'linkedin' : LINKEDIN[0],
             'kaggle': CODING_MEDIA[1],
             'mail': CONST_EMAILS,  # all emails opened
-            'mail0': CONST_EMAILS[0],
-            'mail1': CONST_EMAILS[1],
-            'mail2': CONST_EMAILS[2],
+            'mail0': CONST_EMAILS[0],   # open bxsci email
+            'mail1': CONST_EMAILS[1],   # open eps email
+            'mail2': CONST_EMAILS[2],   # open personal gmail
             'xkcd': BLOGS[0],  # xkcd main
             'blog': BLOGS[1],  # xkcd blog
             'school': SCHOOL[0],  # bxsci main website
@@ -29,6 +30,8 @@ input_commands = {
                 "g" : 'github',
                 "git" : 'github',
                 "github" : 'github',
+                "l" : 'linkedin',
+                "linkedin" : 'linkedin',
                 "k" : 'kaggle',
                 "kaggle" : 'kaggle',
                 "mail" : 'mail0',
