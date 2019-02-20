@@ -18,6 +18,7 @@ class Data:
                                     "twitter" : get_twitter,
                                     "instagram" : get_instagram,
                                     "github" : get_github,
+                                    "linkedin" : get_linkedin,
                                     "kaggle" : get_kaggle,
                                     "mail" : get_mail,
                                     "xkcd" : get_xkcd,
