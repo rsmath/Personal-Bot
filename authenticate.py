@@ -25,6 +25,7 @@ class Websites:
                             'twitter': self.get_twitter,
                             'instagram': self.get_instagram,
                             'github': self.get_github,
+                            'linkedin' : self.get_linkedin,
                             'kaggle': self.get_kaggle,
                             'mail': self.get_mail,      # open all the emails
                             'mail0': self.get_mail,     # open bxsci email
