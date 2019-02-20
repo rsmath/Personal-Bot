@@ -55,7 +55,7 @@ class Websites:
     def get_school(self, spec):
         # TODO : either open school website or the sciencesurvey based on param
         # if check_if_none(self.driver):
-        self.driver.execute_script(f'''window.open({str(self.url)}, "_blank");''')
+        # self.driver.execute_script(f'''window.open({str(self.url)}, "_blank");''')
 
         pass
 

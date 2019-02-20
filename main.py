@@ -8,7 +8,6 @@
     Getting data is second priority, to be focused on later, primary focus to open and sign into links.
 """
 
-import time     # for sleeping
 from authenticate import Websites
 from get_data import Data
 from helpers import convert_to_command as ctc, command_to_link as ctl

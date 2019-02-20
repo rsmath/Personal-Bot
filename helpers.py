@@ -49,6 +49,7 @@ input_commands = {
                 "school news" : 'sciencesurvey'
                 }
 
+
 def command_to_link(comm):
     return commands[comm.lower()]
 
