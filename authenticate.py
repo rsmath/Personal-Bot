@@ -67,12 +67,13 @@ class Websites:
         #     body.send_keys(Keys.CONTROL + 't')
         self.driver.get(self.url)
         time.sleep(2)
-        giver_username = self.driver.find_element_by_id('login-email')
-        giver_username.send_keys(self.file.iloc[2, 1])
+        give_username = self.driver.find_element_by_id('login-email')
+        give_username.send_keys(self.file.iloc[2, 1])
         time.sleep(2)
         give_password = self.driver.find_element_by_id('login-password')
         time.sleep(2)
-        giver_username.send_keys(Keys.RETURN)
+        give_password.send_keys(self.file.iloc[2, 2])
+        give_password.send_keys(Keys.RETURN)
         pass
 
     def get_twitter(self):
