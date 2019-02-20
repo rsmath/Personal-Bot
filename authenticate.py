@@ -64,6 +64,14 @@ class Websites:
         # if check_if_none(self.driver):
         #     body = self.driver.find_element_by_tag_name("body")
         #     body.send_keys(Keys.CONTROL + 't')
+        self.driver.get(self.url)
+        time.sleep(2)
+        giver_username = self.driver.find_element_by_id('login-email')
+        giver_username.send_keys(self.file.iloc[2, 1])
+        time.sleep(2)
+        give_password = self.driver.find_element_by_id('login-password')
+        time.sleep(2)
+        giver_username.send_keys(Keys.RETURN)
         pass
 
     def get_twitter(self):
