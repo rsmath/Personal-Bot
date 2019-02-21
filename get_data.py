@@ -22,7 +22,8 @@ class Data:
                                     "kaggle" : get_kaggle,
                                     "mail" : get_mail,
                                     "xkcd" : get_xkcd,
-                                    "school" : get_school
+                                    "school" : get_school,      # different param from below one
+                                    "sciencesurvey" : get_school        # different param from above one
                                     }
 
     def get_from(self, media): # receive a link to sign in into
