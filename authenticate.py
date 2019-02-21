@@ -44,14 +44,14 @@ class Websites:
         self.driver = webdriver.Chrome(self.path_to_chromedriver,
                                        chrome_options=self.chrome_options)  # chrome_options added
         # TODO : in order to pass in certain params to certain functions, I need explicit cases mentioned here
-        if media == 'mail0' or media == 'mail1' or media == 'mail2':        # EMAILS
-            self.media_to_func[media](num=int(media[-1]))
-        elif media == 'school' or media == 'sciencesurvey':                 # SCHOOL WEBSITE AND SCIENCESURVEY
-            self.media_to_func[media](spec=media)
-        elif media == 'xkcd' or media == 'blog':
-            self.media_to_func[media](spec=media)                           # XKCD OR BLOG
-        else:
-            self.media_to_func[media]()
+        # if media == 'mail0' or media == 'mail1' or media == 'mail2':        # EMAILS
+        #     self.media_to_func[media](num=int(media[-1]))
+        # elif media == 'school' or media == 'sciencesurvey':                 # SCHOOL WEBSITE AND SCIENCESURVEY
+        #     self.media_to_func[media](spec=media)
+        # elif media == 'xkcd' or media == 'blog':
+        #     self.media_to_func[media](spec=media)                           # XKCD OR BLOG
+        # else:
+        #     self.media_to_func[media]()
 
     def get_school(self, spec):
         # TODO : either open school website or the sciencesurvey based on param
