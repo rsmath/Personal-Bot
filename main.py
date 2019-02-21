@@ -29,7 +29,7 @@ class Jarvis:
         self.data.get_from(ctc(cmd))
 
 
-def format_print(cmd = None):
+def format_print(cmd=None):
     if cmd is None or cmd not in input_commands.keys():
         print('\nPlease pass in a valid command')
         return
