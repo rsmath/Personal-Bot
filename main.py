@@ -38,7 +38,7 @@ def format_print(cmd = None):
 
 if __name__ == '__main__':
     Bot = Jarvis()
-    print('You have initiated the Jarvis Bot. Pass in a valid command to sign in a media and open the browser with it.')
+    print('\nYou have initiated the Jarvis Bot. Pass in a valid command to sign in a media and open the browser with it.')
     print('\nPass in \'e\' or \'end\' to terminate the program.')
     cmd = input('\nEnter your command here: ')
     while cmd is None or cmd not in input_commands.keys():
