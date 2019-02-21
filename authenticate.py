@@ -57,7 +57,7 @@ class Websites:
         # TODO : either open school website or the sciencesurvey based on param
         # if check_if_none(self.driver):
         # self.driver.execute_script(f'''window.open({str(self.url)}, "_blank");''')
-
+        self.driver.get(self.url)
         pass
 
     def get_linkedin(self):
