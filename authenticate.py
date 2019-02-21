@@ -8,6 +8,7 @@ import pandas as pd
 from selenium import webdriver
 from helpers import commands        # to convert link to command
 from selenium.webdriver.common.keys import Keys
+from links import SCHOOL, CONST_EMAILS, BLOGS
 import time
 
 
@@ -57,7 +58,11 @@ class Websites:
         # TODO : either open school website or the sciencesurvey based on param
         # if check_if_none(self.driver):
         # self.driver.execute_script(f'''window.open({str(self.url)}, "_blank");''')
-
+        if spec == 'school':
+            self.url = SCHOOL[0]
+        elif spec == 'sciencesurvey':
+            self.url = SCHOOL[1]
+        self.driver.get(self.url)
         pass
 
     def get_linkedin(self):
