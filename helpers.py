@@ -50,7 +50,6 @@ input_commands = {
                 "school" : 'school',
                 "s news" : 'sciencesurvey',
                 "school news" : 'sciencesurvey',
-                "s news" : 'sciencesurvey'
                 }
 
 

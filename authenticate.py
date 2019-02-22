@@ -148,6 +148,7 @@ class Websites:
         # if check_if_none(self.driver):
         #     body = self.driver.find_element_by_tag_name("body")
         #     body.send_keys(Keys.CONTROL + 't')
+
         pass
 
     def get_xkcd(self, spec):
