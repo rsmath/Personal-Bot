@@ -21,6 +21,9 @@ class Data:
                                     "linkedin" : get_linkedin,
                                     "kaggle" : get_kaggle,
                                     "mail" : get_mail,
+                                    "mail0" : get_mail,
+                                    "mail1" : get_mail,
+                                    "mail2" : get_mail,
                                     "xkcd" : get_xkcd,
                                     "school" : get_school,      # different param from below one
                                     "sciencesurvey" : get_school        # different param from above one
