@@ -54,11 +54,11 @@ class Websites:
         else:
             self.media_to_func[media]()
 
-    def get_school(self, spec):
+    def get_school(self, spec=None):
         # TODO : either open school website or the sciencesurvey based on param
         # if check_if_none(self.driver):
         # self.driver.execute_script(f'''window.open({str(self.url)}, "_blank");''')
-        if spec == 'school':
+        if spec == 'school' or spec is None:
             self.url = SCHOOL[0]
         elif spec == 'sciencesurvey':
             self.url = SCHOOL[1]
