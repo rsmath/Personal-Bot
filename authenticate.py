@@ -148,7 +148,10 @@ class Websites:
         # if check_if_none(self.driver):
         #     body = self.driver.find_element_by_tag_name("body")
         #     body.send_keys(Keys.CONTROL + 't')
-
+        if num is None:
+            self.url = CONST_EMAILS[0]
+        else:
+            self.url = CONST_EMAILS[num]
         pass
 
     def get_xkcd(self, spec):
