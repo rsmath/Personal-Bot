@@ -152,7 +152,16 @@ class Websites:
             self.url = CONST_EMAILS[0]
         else:
             self.url = CONST_EMAILS[num]
-        pass
+        self.driver.get(self.url)
+        time.sleep(2)
+        email_input = self.driver.find_element_by_id('identifierId')
+        email_input.send_keys(self.file.iloc[5, 1])
+        email_input.send_keys(Keys.RETURN)
+        time.sleep(2)
+        password_input = self.driver.find_element_by_class_name('whsOnd')
+        password_input.send_keys(self.file.iloc[5, 2])
+        time.sleep(2)
+        password_input.send_keys(Keys.RETURN)
 
     def get_xkcd(self, spec):
         # TODO : just open the xkcd desired, either the blog or the comics
