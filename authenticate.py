@@ -150,16 +150,21 @@ class Websites:
         #     body.send_keys(Keys.CONTROL + 't')
         if num is None:
             self.url = CONST_EMAILS[0]
+            email = self.file.iloc[5, 1]
+            password = self.file.iloc[5, 2]
+            self.driver.execute_script(f'''window.open({str(self.url)}, "_blank");''') # make use of this
         else:
             self.url = CONST_EMAILS[num]
+            email = self.file.iloc[num + 5, 1]
+            password = self.file.iloc[num + 5, 2]
         self.driver.get(self.url)
         time.sleep(2)
         email_input = self.driver.find_element_by_id('identifierId')
-        email_input.send_keys(self.file.iloc[5, 1])
+        email_input.send_keys(email)
         email_input.send_keys(Keys.RETURN)
         time.sleep(2)
         password_input = self.driver.find_element_by_class_name('whsOnd')
-        password_input.send_keys(self.file.iloc[5, 2])
+        password_input.send_keys(password)
         time.sleep(2)
         password_input.send_keys(Keys.RETURN)
 
