@@ -33,6 +33,7 @@ def format_print(command=None):
     if command is None or command not in input_commands.keys():
         print('\nPlease pass in a valid command')
         return
+
     print(f'Command that was passed: {ctc(command)}')
 
 
@@ -44,8 +45,10 @@ if __name__ == '__main__':
     while cmd is None or cmd not in input_commands.keys():
         format_print()
         cmd = input('\nEnter your command here: ')
+
     while cmd.lower() != 'end' and cmd.lower() != 'e':
         format_print(cmd)
         Bot.begin(cmd)
         cmd = input('\nEnter your command here: ')
+
     print('\nThank you for using Jarvis.\nExecution terminated.')

@@ -44,13 +44,17 @@ class Websites:
         media = link_to_media(self.url)
         self.driver = webdriver.Chrome(self.path_to_chromedriver,
                                        chrome_options=self.chrome_options)  # chrome_options added
+
         # TODO : in order to pass in certain params to certain functions, I need explicit cases mentioned here
         if media == 'mail0' or media == 'mail1' or media == 'mail2':        # EMAILS
             self.media_to_func[media](num=int(media[-1]))
+
         elif media == 'school' or media == 'sciencesurvey':                 # SCHOOL WEBSITE AND SCIENCESURVEY
             self.media_to_func[media](spec=media)
+
         elif media == 'xkcd' or media == 'blog':
-            self.media_to_func[media](spec=media)                           # XKCD OR BLOG
+            self.media_to_func[media](spec=media)       # XKCD OR BLOG
+
         else:
             self.media_to_func[media]()
 
@@ -60,10 +64,11 @@ class Websites:
         # self.driver.execute_script(f'''window.open({str(self.url)}, "_blank");''')
         if spec == 'school' or spec is None:
             self.url = SCHOOL[0]
+
         elif spec == 'sciencesurvey':
             self.url = SCHOOL[1]
+
         self.driver.get(self.url)
-        pass
 
     def get_linkedin(self):
         # TODO : sign into linkedin
@@ -80,7 +85,6 @@ class Websites:
         give_password.send_keys(self.file.iloc[4, 2])
         time.sleep(2)
         give_password.send_keys(Keys.RETURN)
-        pass
 
     def get_twitter(self):
         # TODO : sign into twitter
@@ -150,33 +154,22 @@ class Websites:
         #     body.send_keys(Keys.CONTROL + 't')
         if num is None:
             self.url = CONST_EMAILS[0]
-            email = self.file.iloc[5, 1]
-            password = self.file.iloc[5, 2]
-            self.driver.get(self.url)
+            email, password = self.file.iloc[5, 1], self.file.iloc[5, 2]
+            mail_action(self.driver, self.url, email, password)
+            email, password = self.file.iloc[6, 1], self.file.iloc[6, 2]        # update
             time.sleep(2)
-            email_input = self.driver.find_element_by_id('identifierId')
-            email_input.send_keys(email)
-            email_input.send_keys(Keys.RETURN)
+            self.driver.execute_script(f'''window.open({self.url}, "_blank");''')
+            mail_action(self.driver, self.url, email, password)     # second email
+            email, password = self.file.iloc[7, 1], self.file.iloc[7, 2]        # update
             time.sleep(2)
-            password_input = self.driver.find_element_by_class_name('whsOnd')
-            password_input.send_keys(password)
-            time.sleep(2)
-            password_input.send_keys(Keys.RETURN)
-            self.driver.execute_script(f'''window.open({str(self.url)}, "_blank");''')
+            self.driver.execute_script(f'''window.open({self.url}, "_blank");''')
+            mail_action(self.driver, self.url, email, password)     # third email
+
         else:
             self.url = CONST_EMAILS[num]
             email = self.file.iloc[num + 5, 1]
             password = self.file.iloc[num + 5, 2]
-        self.driver.get(self.url)
-        time.sleep(2)
-        email_input = self.driver.find_element_by_id('identifierId')
-        email_input.send_keys(email)
-        email_input.send_keys(Keys.RETURN)
-        time.sleep(2)
-        password_input = self.driver.find_element_by_class_name('whsOnd')
-        password_input.send_keys(password)
-        time.sleep(2)
-        password_input.send_keys(Keys.RETURN)
+        mail_action(self.driver, self.url, email, password)
 
     def get_xkcd(self, spec):
         # TODO : just open the xkcd desired, either the blog or the comics
@@ -194,6 +187,18 @@ def link_to_media(link):
 def check_if_none(driver):
     return not (driver is None)
 
+
+def mail_action(driver, url, email, password):
+    driver.get(url)
+    time.sleep(2)
+    email_input = driver.find_element_by_id('identifierId')
+    email_input.send_keys(email)
+    email_input.send_keys(Keys.RETURN)
+    time.sleep(2)
+    password_input = driver.find_element_by_class_name('whsOnd')
+    password_input.send_keys(password)
+    time.sleep(2)
+    password_input.send_keys(Keys.RETURN)
 
 if __name__ == '__main__':
     website = Websites()
