@@ -9,7 +9,6 @@ import time
 import pandas as pd
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
-
 from helpers import commands  # to convert link to command
 from links import SCHOOL, CONST_EMAILS
 
@@ -202,6 +201,7 @@ def mail_action(driver, url, email, password):
     password_input.send_keys(password)
     time.sleep(2)
     password_input.send_keys(Keys.RETURN)
+
 
 if __name__ == '__main__':
     website = Websites()
