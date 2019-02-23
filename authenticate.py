@@ -4,15 +4,18 @@
     username and password columns instead of expecting my accounts to be already signed in.
 """
 
+import time
+
 import pandas as pd
 from selenium import webdriver
-from helpers import commands        # to convert link to command
 from selenium.webdriver.common.keys import Keys
-from links import SCHOOL, CONST_EMAILS, BLOGS
-import time
+
+from helpers import commands  # to convert link to command
+from links import SCHOOL, CONST_EMAILS
 
 
 class Websites:
+
     def __init__(self):
         self.url = 'https://github.com/ramanshsharma2806'       # default link if none is passed in
         self.path_to_chromedriver = "/Users/ramanshsharma/Downloads/chromedriver"
@@ -158,11 +161,11 @@ class Websites:
             mail_action(self.driver, self.url, email, password)
             email, password = self.file.iloc[6, 1], self.file.iloc[6, 2]        # update
             time.sleep(2)
-            self.driver.execute_script(f'''window.open({self.url}, "_blank");''')
+            self.driver.execute_script(f'window.open({self.url}, "_blank");')
             mail_action(self.driver, self.url, email, password)     # second email
             email, password = self.file.iloc[7, 1], self.file.iloc[7, 2]        # update
             time.sleep(2)
-            self.driver.execute_script(f'''window.open({self.url}, "_blank");''')
+            self.driver.execute_script(f'window.open({self.url}, "_blank");')
             mail_action(self.driver, self.url, email, password)     # third email
 
         else:
