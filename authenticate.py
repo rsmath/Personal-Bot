@@ -187,7 +187,7 @@ def link_to_media(link):
 
 
 def check_if_none(driver):
-    return not (driver is None)
+    return driver is not None
 
 
 def mail_action(driver, url, email, password):
