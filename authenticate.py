@@ -170,6 +170,7 @@ class Websites:
             self.url = CONST_EMAILS[num]
             email = self.file.iloc[num + 5, 1]
             password = self.file.iloc[num + 5, 2]
+
         mail_action(self.driver, self.url, email, password)
 
     def get_xkcd(self, spec):
@@ -179,8 +180,11 @@ class Websites:
         #     body.send_keys(Keys.CONTROL + 't')
         if spec == 'xkcd':
             self.url = BLOGS[0]
-            self.driver.get(self.url)
 
+        elif spec == 'blog':
+            self.url = BLOGS[1]
+
+        self.driver.get(self.url)
 
 
 
