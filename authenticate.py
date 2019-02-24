@@ -5,7 +5,6 @@
 """
 
 import time
-
 import pandas as pd
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
@@ -178,7 +177,7 @@ class Websites:
         # if check_if_none(self.driver):
         #     body = self.driver.find_element_by_tag_name("body")
         #     body.send_keys(Keys.CONTROL + 't')
-        pass
+
 
 
 def link_to_media(link):
