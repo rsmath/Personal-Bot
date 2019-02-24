@@ -9,7 +9,7 @@ import pandas as pd
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 from helpers import commands  # to convert link to command
-from links import SCHOOL, CONST_EMAILS
+from links import SCHOOL, CONST_EMAILS, BLOGS
 
 
 class Websites:
@@ -33,8 +33,8 @@ class Websites:
                             'mail0': self.get_mail,     # open bxsci email
                             'mail1': self.get_mail,     # open eps email
                             'mail2':self.get_mail,      # open personal gmail
-                            'xkcd': self.get_xkcd,
-                            'blog': self.get_xkcd,
+                            'xkcd': self.get_xkcd,      # main article page
+                            'blog': self.get_xkcd,      # blog (comic) page
                             'school': self.get_school,      # open the school website
                             'sciencesurvey': self.get_school        # open the sciencesurvey online newspaper
                             }
@@ -177,7 +177,11 @@ class Websites:
         # if check_if_none(self.driver):
         #     body = self.driver.find_element_by_tag_name("body")
         #     body.send_keys(Keys.CONTROL + 't')
-        self.driver.get(self.url)
+        if spec == 'xkcd':
+            self.url = BLOGS[0]
+            self.driver.get(self.url)
+
+
 
 
 def link_to_media(link):
