@@ -187,14 +187,9 @@ class Websites:
         self.driver.get(self.url)
 
 
-
 def link_to_media(link):
     # TODO : obtain the media associated with a link
     return [item[0] for item in commands.items() if link == item[1]][0]
-
-
-def check_if_none(driver):
-    return driver is not None
 
 
 def mail_action(driver, url, email, password):

@@ -15,18 +15,18 @@ class Data:
         # TODO : Initiate variables
         self.media = ''
         self.connector_to_website = {
-                                    "twitter" : get_twitter,
-                                    "instagram" : get_instagram,
-                                    "github" : get_github,
-                                    "linkedin" : get_linkedin,
-                                    "kaggle" : get_kaggle,
-                                    "mail" : get_mail,
-                                    "mail0" : get_mail,
-                                    "mail1" : get_mail,
-                                    "mail2" : get_mail,
-                                    "xkcd" : get_xkcd,
-                                    "school" : get_school,      # different param from below one
-                                    "sciencesurvey" : get_school        # different param from above one
+                                    "twitter": get_twitter,
+                                    "instagram": get_instagram,
+                                    "github": get_github,
+                                    "linkedin": get_linkedin,
+                                    "kaggle": get_kaggle,
+                                    "mail": get_mail,
+                                    "mail0": get_mail,
+                                    "mail1": get_mail,
+                                    "mail2": get_mail,
+                                    "xkcd": get_xkcd,
+                                    "school": get_school,      # different param from below one
+                                    "sciencesurvey": get_school        # different param from above one
                                     }
 
     def get_from(self, media): # receive a link to sign in into
