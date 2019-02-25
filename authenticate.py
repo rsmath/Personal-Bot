@@ -114,11 +114,13 @@ class Websites:
         log_in = self.driver.find_element_by_link_text('Log in')
         log_in.click()
         time.sleep(2)
-        email_enter = self.driver.find_element_by_id('f3f9e2917ed57f8')
+        email_enter = self.driver.find_element_by_class_name('_2hvTZ')
         email_enter.send_keys(self.file.iloc[2, 1])
         time.sleep(2)
-        email_enter.send_keys(Keys.TAB)     # using tab to move to password area
-        email_enter.send_keys(self.file.iloc[2, 2])
+        password_area = self.driver.find_element_by_id('f2383d83b5dcb5')
+        password_area.send_keys(self.file.iloc[2, 2])
+        time.sleep(2)
+        password_area.send_keys(Keys.RETURN)
 
     def get_github(self):
         # TODO : sign into github
