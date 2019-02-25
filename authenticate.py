@@ -110,6 +110,9 @@ class Websites:
         #     body = self.driver.find_element_by_tag_name("body")
         #     body.send_keys(Keys.CONTROL + 't')
         self.driver.get(self.url)
+        time.sleep(2)
+        log_in = self.driver.find_element_by_link_text('Log in')
+        log_in.click()
 
     def get_github(self):
         # TODO : sign into github
