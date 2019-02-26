@@ -101,3 +101,24 @@ I have resorted to using the nomrmal .py python files which can be easily import
 
 
 1. Selenium library- [documentation](https://selenium-python.readthedocs.io/navigating.html)
+
+
+
+
+## Running the project
+
+
+
+
+As of now, this project is not avaiable on pip. Please download the repository in your local computer, then run the following in your terminal / Command Prompt.
+
+
+```bash
+cd Personal-Bot
+python main.py
+```
+
+
+
+
+###### Note: A gif will follow here soon where I will present a small demo on the functionality of this project.
