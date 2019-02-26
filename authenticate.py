@@ -118,7 +118,6 @@ class Websites:
         email_enter.send_keys(self.file.iloc[2, 1])
         time.sleep(2)
         password_area = self.driver.find_elements_by_class_name('_2hvTZ')[1]
-        # self.driver.
         password_area.send_keys(self.file.iloc[2, 2])
         time.sleep(2)
         password_area.send_keys(Keys.RETURN)
