@@ -21,12 +21,12 @@ class Jarvis:
         self.data = Data()
         self.cmd = ''
 
-    def begin(self, cmd):
+    def begin(self, passed_cmd):
         # TODO : for any media command passed, sign in, then wait for other commands which refer to other functions
-        self.cmd = cmd
+        self.cmd = passed_cmd
         url = ctl(ctc(self.cmd))        # desired link from the prompt
         self.website.sign_in(url)       # open AND sign in
-        self.data.get_from(ctc(cmd))
+        self.data.get_from(ctc(passed_cmd))
 
 
 def format_print(command=None):
