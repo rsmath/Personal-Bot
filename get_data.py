@@ -30,7 +30,7 @@ class Data:
                                     "sciencesurvey": get_school        # different param from above one
                                     }
 
-    def get_from(self, media): # receive a link to sign in into
+    def get_from(self, media):  # receive a link to sign in into
         # TODO : a social media name is given in string, then is signed into, and collected data from
         return self.connector_to_website[media]()
 
