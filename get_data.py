@@ -25,6 +25,7 @@ class Data:
                                     "mail1": get_mail,
                                     "mail2": get_mail,
                                     "xkcd": get_xkcd,
+                                    "blog": get_xkcd,
                                     "school": get_school,      # different param from below one
                                     "sciencesurvey": get_school        # different param from above one
                                     }
