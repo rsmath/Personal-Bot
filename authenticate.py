@@ -32,7 +32,7 @@ class Websites:
                             'mail': self.get_mail,      # open all the emails
                             'mail0': self.get_mail,     # open bxsci email
                             'mail1': self.get_mail,     # open eps email
-                            'mail2':self.get_mail,      # open personal gmail
+                            'mail2': self.get_mail,      # open personal gmail
                             'xkcd': self.get_xkcd,      # main article page
                             'blog': self.get_xkcd,      # blog (comic) page
                             'school': self.get_school,      # open the school website
