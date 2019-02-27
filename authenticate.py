@@ -61,8 +61,6 @@ class Websites:
 
     def get_school(self, spec=None):
         # TODO : either open school website or the sciencesurvey based on param
-        # if check_if_none(self.driver):
-        # self.driver.execute_script(f'''window.open({str(self.url)}, "_blank");''')
         if spec == 'school' or spec is None:
             self.url = SCHOOL[0]
 
@@ -73,9 +71,6 @@ class Websites:
 
     def get_linkedin(self):
         # TODO : sign into linkedin
-        # if check_if_none(self.driver):
-        #     body = self.driver.find_element_by_tag_name("body")
-        #     body.send_keys(Keys.CONTROL + 't')
         self.driver.get(self.url)
         time.sleep(2)
         give_username = self.driver.find_element_by_id('login-email')
@@ -89,9 +84,6 @@ class Websites:
 
     def get_twitter(self):
         # TODO : sign into twitter
-        # if check_if_none(self.driver):
-        #     body = self.driver.find_element_by_tag_name("body")
-        #     body.send_keys(Keys.CONTROL + 't')
         self.driver.get(self.url)
         time.sleep(2)
         click_login = self.driver.find_element_by_link_text('Log in')
@@ -106,9 +98,6 @@ class Websites:
 
     def get_instagram(self):
         # TODO : sign into instagram
-        # if check_if_none(self.driver):
-        #     body = self.driver.find_element_by_tag_name("body")
-        #     body.send_keys(Keys.CONTROL + 't')
         self.driver.get(self.url)
         time.sleep(2)
         log_in = self.driver.find_element_by_link_text('Log in')
@@ -124,9 +113,6 @@ class Websites:
 
     def get_github(self):
         # TODO : sign into github
-        # if check_if_none(self.driver):
-        #     body = self.driver.find_element_by_tag_name("body")
-        #     body.send_keys(Keys.CONTROL + 't')
         self.driver.get(self.url)
         time.sleep(2)
         sign_in_button = self.driver.find_element_by_link_text('Sign in')
@@ -143,9 +129,6 @@ class Websites:
 
     def get_kaggle(self):
         # TODO : sign into kaggle
-        # if check_if_none(self.driver):
-        #     body = self.driver.find_element_by_tag_name("body")
-        #     body.send_keys(Keys.CONTROL + 't')
         self.driver.get(self.url)
         time.sleep(2)
         click_login = self.driver.find_element_by_class_name('button--small')
@@ -161,9 +144,6 @@ class Websites:
 
     def get_mail(self, num=None):
         # TODO : sign into the mail specified; 0 is bxsci, 1 is eps, 2 is personal gmail, if no num, then all
-        # if check_if_none(self.driver):
-        #     body = self.driver.find_element_by_tag_name("body")
-        #     body.send_keys(Keys.CONTROL + 't')
         if num is None:
             self.url = CONST_EMAILS[0]
             email, password = self.file.iloc[5, 1], self.file.iloc[5, 2]
@@ -186,9 +166,6 @@ class Websites:
 
     def get_xkcd(self, spec):
         # TODO : just open the xkcd desired, either the blog or the comics
-        # if check_if_none(self.driver):
-        #     body = self.driver.find_element_by_tag_name("body")
-        #     body.send_keys(Keys.CONTROL + 't')
         if spec == 'xkcd':
             self.url = BLOGS[0]
 
