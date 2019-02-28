@@ -86,7 +86,7 @@ I am in senior year of high school, still I believe that I can find enough time 
 
 
 
-###### Note: This jupyter notebook will be used for running the main python module and testing other modules by importing them (when any module is imported, it is ran completely in the place where it is imported). It will now be my practice to use a jupyter notebook and importing a module to test it out.
+###### Note: I will be using PyCharm to develop and deploy this project. This is because I do not need the specific capabilities of Jupyter notebook right now in this project, whereas, the functionalities of PyCahrm with developing in modules is extremely beneficial. 
 
 
 
