@@ -195,4 +195,4 @@ def mail_action(driver, url, email, password):
 
 if __name__ == '__main__':
     website = Websites()
-    website.sign_in()
+    website.sign_in(CONST_EMAILS)
