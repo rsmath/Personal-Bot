@@ -15,31 +15,31 @@ from links import SCHOOL, CONST_EMAILS, BLOGS
 class Websites:
 
     def __init__(self):
-        self.url = 'https://github.com/ramanshsharma2806'       # default link if none is passed in
+        self.url = 'https://github.com/ramanshsharma2806'  # default link if none is passed in
         self.path_to_chromedriver = "/Users/ramanshsharma/Downloads/chromedriver"
-        self.chrome_options = webdriver.ChromeOptions()     # to keep the opened browser open
-        self.chrome_options.add_experimental_option("detach", True)     # this keeps the opened browser open
+        self.chrome_options = webdriver.ChromeOptions()  # to keep the opened browser open
+        self.chrome_options.add_experimental_option("detach", True)  # this keeps the opened browser open
         self.file = pd.read_csv('secrets.csv')
         self.driver = None
         # if instantiated here, then it will launch a browser when the object is instantiated
         # which is highly undesired
         self.media_to_func = {
-                            'twitter': self.get_twitter,
-                            'instagram': self.get_instagram,
-                            'github': self.get_github,
-                            'linkedin' : self.get_linkedin,
-                            'kaggle': self.get_kaggle,
-                            'mail': self.get_mail,      # open all the emails
-                            'mail0': self.get_mail,     # open bxsci email
-                            'mail1': self.get_mail,     # open eps email
-                            'mail2': self.get_mail,      # open personal gmail
-                            'xkcd': self.get_xkcd,      # main article page
-                            'blog': self.get_xkcd,      # blog (comic) page
-                            'school': self.get_school,      # open the school website
-                            'sciencesurvey': self.get_school        # open the sciencesurvey online newspaper
-                            }
+            'twitter': self.get_twitter,
+            'instagram': self.get_instagram,
+            'github': self.get_github,
+            'linkedin': self.get_linkedin,
+            'kaggle': self.get_kaggle,
+            'mail': self.get_mail,  # open all the emails
+            'mail0': self.get_mail,  # open bxsci email
+            'mail1': self.get_mail,  # open eps email
+            'mail2': self.get_mail,  # open personal gmail
+            'xkcd': self.get_xkcd,  # main article page
+            'blog': self.get_xkcd,  # blog (comic) page
+            'school': self.get_school,  # open the school website
+            'sciencesurvey': self.get_school  # open the sciencesurvey online newspaper
+        }
 
-    def sign_in(self, url=None):        # keeps the website open with chrome_options
+    def sign_in(self, url=None):  # keeps the website open with chrome_options
         if url is not None:
             self.url = url
         media = link_to_media(self.url)
@@ -47,14 +47,14 @@ class Websites:
                                        chrome_options=self.chrome_options)  # chrome_options added
 
         # TODO : in order to pass in certain params to certain functions, I need explicit cases mentioned here
-        if media == 'mail0' or media == 'mail1' or media == 'mail2':        # EMAILS
+        if media == 'mail0' or media == 'mail1' or media == 'mail2':  # EMAILS
             self.media_to_func[media](num=int(media[-1]))
 
-        elif media == 'school' or media == 'sciencesurvey':                 # SCHOOL WEBSITE AND SCIENCESURVEY
+        elif media == 'school' or media == 'sciencesurvey':  # SCHOOL WEBSITE AND SCIENCESURVEY
             self.media_to_func[media](spec=media)
 
         elif media == 'xkcd' or media == 'blog':
-            self.media_to_func[media](spec=media)       # XKCD OR BLOG
+            self.media_to_func[media](spec=media)  # XKCD OR BLOG
 
         else:
             self.media_to_func[media]()
@@ -148,14 +148,14 @@ class Websites:
             self.url = CONST_EMAILS[0]
             email, password = self.file.iloc[5, 1], self.file.iloc[5, 2]
             mail_action(self.driver, self.url, email, password)
-            email, password = self.file.iloc[6, 1], self.file.iloc[6, 2]        # update
+            email, password = self.file.iloc[6, 1], self.file.iloc[6, 2]  # update
             time.sleep(2)
             self.driver.execute_script(f'window.open({self.url}, "_blank");')
-            mail_action(self.driver, self.url, email, password)     # second email
-            email, password = self.file.iloc[7, 1], self.file.iloc[7, 2]        # update
+            mail_action(self.driver, self.url, email, password)  # second email
+            email, password = self.file.iloc[7, 1], self.file.iloc[7, 2]  # update
             time.sleep(2)
             self.driver.execute_script(f'window.open({self.url}, "_blank");')
-            mail_action(self.driver, self.url, email, password)     # third email
+            mail_action(self.driver, self.url, email, password)  # third email
 
         else:
             self.url = CONST_EMAILS[num]
