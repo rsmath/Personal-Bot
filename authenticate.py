@@ -42,6 +42,7 @@ class Websites:
     def sign_in(self, url=None):  # keeps the website open with chrome_options
         if url is not None:
             self.url = url
+
         media = link_to_media(self.url)
         self.driver = webdriver.Chrome(self.path_to_chromedriver,
                                        chrome_options=self.chrome_options)  # chrome_options added
