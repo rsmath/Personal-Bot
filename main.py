@@ -38,6 +38,9 @@ def format_print(command=None):
 
 
 if __name__ == '__main__':
+    '''
+    Need to change this place so that user would be able to chose between opening or getting data
+    '''
     Bot = Jarvis()
     print('\nYou have initiated Jarvis. Pass in a valid command to sign into a media and open the browser with it.')
     print('\nPass in \'e\' or \'end\' to terminate the program.')
