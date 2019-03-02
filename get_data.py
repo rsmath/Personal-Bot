@@ -1,6 +1,7 @@
 """
     I will be using beautifulsoup4 and requests to get data from online forums
 """
+from helpers import commands  # used to obtain the links of the forums
 
 # requests module will be used to download online files if any, but to also give raw HTML text to beautifulsoup4
 import requests
@@ -75,7 +76,18 @@ def get_mail():
 def get_xkcd():
     # TODO : get me the last 10 articles from the xkcd blog, AND 10 random pics from the xkcd comic. Well, the first
     #  pic from the comic has to be after random is pressed, I already saw the Carbonated Beverage one
-    pass
+    # For default right now, I will only access the main article page of xkcd. Learning requests here
+    response = requests.get()
+    try:
+        response.raise_for_status()
+
+    except Exception as exc:
+        print('There was a problem: %s' % exc)
+
+    file = open('RomeoAndJuliet.txt', 'wb')
+    for chunk in response.iter_content(100000):
+        file.write(chunk)
+    file.close()
 
 
 if __name__ == '__main__':
