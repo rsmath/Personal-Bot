@@ -7,7 +7,7 @@ from helpers import commands  # used to obtain the links of the forums
 import requests
 
 # beautifulsoup4 will be used to collect data in this module
-import bs4
+import bs4 as bs
 
 
 class Data:
