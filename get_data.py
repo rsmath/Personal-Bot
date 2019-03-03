@@ -78,14 +78,21 @@ class Data:
         file = open('file.txt', 'wb')
         self.bsoup = bs.BeautifulSoup(response.text, features="html.parser")
         article = self.bsoup.select('article.entry')
+        article_url = 'https:' + article[0].get('src')
+        res = requests.get(article_url)
+        if check_res(response) is not None:
+            print(check_res(response))
+            return
 
+        for chunk in res.iter_content(100000):
+            file.write(chunk)
 
 def check_res(res):
     try:
         res.raise_for_status()
 
     except Exception as exc:
-        return '\nThere was a problem: %s\nPlease try giving the command again' % exc
+        return '\nThere was a problem: %s\nPlease try giving the command again\n' % exc
 
 
 if __name__ == '__main__':
