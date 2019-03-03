@@ -71,17 +71,21 @@ class Data:
         #  pic from the comic has to be after random is pressed, I already saw the Carbonated Beverage one
         # For default right now, I will only access the main article page of xkcd. Learning requests here
         response = requests.get(commands[param])
-        try:
-            response.raise_for_status()
+        if check_res(response) is not None:
+            print(check_res(response))
+            return
 
-        except Exception as exc:
-            print('There was a problem: %s' % exc)
-
-        file = open('file.txt')
+        file = open('file.txt', 'wb')
         self.bsoup = bs.BeautifulSoup(response.text, features="html.parser")
         article = self.bsoup.select('article.entry')
-        s = article[0].getText()
-        file.write('asdf')
+
+
+def check_res(res):
+    try:
+        res.raise_for_status()
+
+    except Exception as exc:
+        return '\nThere was a problem: %s\nPlease try giving the command again' % exc
 
 
 if __name__ == '__main__':
