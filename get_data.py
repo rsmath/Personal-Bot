@@ -45,7 +45,7 @@ class Data:
     def get_twitter(self, param=None):
         # TODO : get data such as number of followers and following, a few of their names, also some of the tweets from my
         #  favorite twitter accounts
-    pass
+        pass
 
 
     def get_linkedin(self, param=None):
@@ -86,7 +86,7 @@ class Data:
             print('There was a problem: %s' % exc)
 
         file = open('file.txt', 'wb')
-        self.bsoup =
+        self.bsoup = bs.BeautifulSoup(response.text)
 
 
 if __name__ == '__main__':
