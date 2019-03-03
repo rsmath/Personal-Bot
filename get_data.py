@@ -80,7 +80,7 @@ class Data:
         file = open('file.txt', 'wb')
         self.bsoup = bs.BeautifulSoup(response.text, features="html.parser")
         article = self.bsoup.select('article.entry')
-        for chunk in article.getText().iter_content(100000):
+        for chunk in article[0].getText().iter_content(100000):
             file.write(chunk)
         file.close()
 
