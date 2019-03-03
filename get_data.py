@@ -77,12 +77,11 @@ class Data:
         except Exception as exc:
             print('There was a problem: %s' % exc)
 
-        file = open('file.txt', 'wb')
+        file = open('file.txt')
         self.bsoup = bs.BeautifulSoup(response.text, features="html.parser")
         article = self.bsoup.select('article.entry')
-        for chunk in article[0].getText().iter_content(100000):
-            file.write(chunk)
-        file.close()
+        s = article[0].getText()
+        file.write('asdf')
 
 
 if __name__ == '__main__':
