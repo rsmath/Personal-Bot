@@ -78,7 +78,9 @@ class Data:
         file = open('file.txt', 'wb')
         self.bsoup = bs.BeautifulSoup(response.text, features="html.parser")
         article = self.bsoup.select('article.entry')
-        article_url = 'https:' + article[0].get('href')
+        print(article[0])
+        article_url = 'https:' + article[0].get('src')
+        print(article_url)
         res = requests.get(article_url)
         if check_res(response) is not None:
             print(check_res(response))
