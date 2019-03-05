@@ -77,17 +77,17 @@ class Data:
 
         file = open('file.txt', 'wb')
         self.bsoup = bs.BeautifulSoup(response.text, features="html.parser")
-        article = self.bsoup.select('article.entry')
-        print(type(article[0].getText()))
-        article_url = 'https:' + article[0].get('src')
-        res = requests.get(article_url)
-        if check_res(response) is not None:
-            print(check_res(response))
-            return
-
-        for chunk in res.iter_content(100000):
-            file.write(chunk)
-
+        # article = self.bsoup.select('article.entry')
+        # print(type(article[0].getText()))
+        # article_url = 'https:' + article[0].get('src')
+        # res = requests.get(article_url)
+        # if check_res(response) is not None:
+        #     print(check_res(response))
+        #     return
+        #
+        # for chunk in res.iter_content(100000):
+        #     file.write(chunk)
+        file.write('hello')
         file.close()
 
 
