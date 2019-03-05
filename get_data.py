@@ -75,11 +75,10 @@ class Data:
             print(check_res(response))
             return
 
-        file = open('file.txt', 'wb')
+        file = open('file.txt', 'w')
         self.bsoup = bs.BeautifulSoup(response.text, features="html.parser")
         article = self.bsoup.select('article.entry')
         file.write(article[0].getText())
-
         file.close()
 
 
