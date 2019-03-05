@@ -75,7 +75,7 @@ class Data:
             print(check_res(response))
             return
 
-        file = open('file.txt', 'wb')
+        file = open('file.txt', 'w')
         self.bsoup = bs.BeautifulSoup(response.text, features="html.parser")
         # article = self.bsoup.select('article.entry')
         # print(type(article[0].getText()))
