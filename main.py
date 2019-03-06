@@ -21,7 +21,7 @@ class Jarvis:
         self.data = Data()
         self.cmd = ''
 
-    def begin(self, passed_cmd):
+    def begin(self, passed_cmd, choice='website'):
         # TODO : for any media command passed, sign in, then wait for other commands which refer to other functions
         self.cmd = passed_cmd
         url = ctl(ctc(self.cmd))  # desired link from the prompt
@@ -45,7 +45,7 @@ if __name__ == '__main__':
     print('\nYou have initiated Jarvis. Pass in a valid command to sign into a media and open the browser with it.')
     print('Pass in \'sign in\' or \'open\' to sign into the websites.\nPass in \'get data\' or \'data\' to obtain the '
           'data from the forums.\n')
-
+    cmd
     print('\nPass in \'e\' or \'end\' to terminate the program.')
     cmd = input('\nEnter your command here: ')
     while cmd is None or cmd not in input_commands.keys():
