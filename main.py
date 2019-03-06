@@ -25,8 +25,11 @@ class Jarvis:
         # TODO : for any media command passed, sign in, then wait for other commands which refer to other functions
         self.cmd = passed_cmd
         url = ctl(ctc(self.cmd))  # desired link from the prompt
-        self.website.sign_in(url)  # open AND sign in
-        self.data.get_from(ctc(passed_cmd))
+        # choosing between signing in or getting the data
+        if choice.lower() == 'website' or choice is None:
+            self.website.sign_in(url)  # open AND sign in
+        elif choice.lower() == 'data':
+            self.data.get_from(ctc(passed_cmd))
 
 
 def format_print(command=None):
