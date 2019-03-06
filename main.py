@@ -28,6 +28,7 @@ class Jarvis:
         # choosing between signing in or getting the data
         if choice.lower() == 'website' or choice is None:
             self.website.sign_in(url)  # open AND sign in
+
         elif choice.lower() == 'data':
             self.data.get_from(ctc(passed_cmd))
 
@@ -47,8 +48,11 @@ if __name__ == '__main__':
     Bot = Jarvis()
     print('\nYou have initiated Jarvis. Pass in a valid command to sign into a media and open the browser with it.')
     print('Pass in \'sign in\' or \'open\' to sign into the websites.\nPass in \'get data\' or \'data\' to obtain the '
-          'data from the forums.\n')
-    cmd
+          'data from the forums.')
+
+    cmd = input('\nEnter your choice here: ')
+    flag = None
+    if cmd.lower() == 'sign in'
     print('\nPass in \'e\' or \'end\' to terminate the program.')
     cmd = input('\nEnter your command here: ')
     while cmd is None or cmd not in input_commands.keys():
