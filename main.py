@@ -61,6 +61,8 @@ if __name__ == '__main__':
             break
         else:
             format_print(cmd)
+            cmd = input('\nEnter your choice here: ')
+            continue
     print('\nPass in \'e\' or \'end\' to terminate the program.')
     cmd = input('\nEnter your command here: ')
     while cmd is None or cmd not in input_commands.keys():
