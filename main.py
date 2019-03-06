@@ -26,7 +26,7 @@ class Jarvis:
         self.cmd = passed_cmd
         url = ctl(ctc(self.cmd))  # desired link from the prompt
         # choosing between signing in or getting the data
-        if choice.lower() == 'website' or choice is None:
+        if choice is None or choice.lower() == 'website':
             self.website.sign_in(url)  # open AND sign in
 
         elif choice.lower() == 'data':
