@@ -63,6 +63,10 @@ if __name__ == '__main__':
             format_print()
             cmd = input('\nEnter your choice here: ')
             continue
+
+    print('\nYou have chosen to sign into websites by passing None into the choice above. To change that choice,'
+          'please terminate and restart the program')
+
     print('\nYou can now pass in your commands.\nPass in \'e\' or \'end\' to terminate the program.')
     cmd = input('\nEnter your command here: ')
     while cmd is None or cmd not in input_commands.keys():
@@ -71,7 +75,7 @@ if __name__ == '__main__':
 
     while cmd.lower() != 'end' and cmd.lower() != 'e':
         format_print(cmd)
-        Bot.begin(cmd)
+        Bot.begin(cmd, choice=flag)
         cmd = input('\nEnter your command here: ')
 
     print('\nThank you for using Jarvis.\nExecution terminated.')
