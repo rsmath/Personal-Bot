@@ -43,6 +43,7 @@ if __name__ == '__main__':
     '''
     Bot = Jarvis()
     print('\nYou have initiated Jarvis. Pass in a valid command to sign into a media and open the browser with it.')
+    print('Pass in \'sign in\' or \'open\'')
     print('\nPass in \'e\' or \'end\' to terminate the program.')
     cmd = input('\nEnter your command here: ')
     while cmd is None or cmd not in input_commands.keys():
