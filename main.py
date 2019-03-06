@@ -52,7 +52,9 @@ if __name__ == '__main__':
 
     cmd = input('\nEnter your choice here: ')
     flag = None
-    if cmd.lower() == 'sign in'
+    if cmd.lower() == 'sign in' or cmd.lower() == 'open':
+        flag = 'website'
+    elif cmd.lower() == 'get data'
     print('\nPass in \'e\' or \'end\' to terminate the program.')
     cmd = input('\nEnter your command here: ')
     while cmd is None or cmd not in input_commands.keys():
