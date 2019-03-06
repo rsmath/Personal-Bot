@@ -47,14 +47,20 @@ if __name__ == '__main__':
     '''
     Bot = Jarvis()
     print('\nYou have initiated Jarvis. Pass in a valid command to sign into a media and open the browser with it.')
-    print('Pass in \'sign in\' or \'open\' to sign into the websites.\nPass in \'get data\' or \'data\' to obtain the '
-          'data from the forums.')
+    print('Pass in \'sign in\' or \'open\' or nothing at all to sign into the websites.\nPass in \'get data\' or '
+          '\'data\' to obtain the data from the forums.')
 
     cmd = input('\nEnter your choice here: ')
     flag = None
-    if cmd.lower() == 'sign in' or cmd.lower() == 'open':
-        flag = 'website'
-    elif cmd.lower() == 'get data'
+    while cmd is not None and cmd != '':  # not empty and not None, meaning a typo
+        if cmd.lower() == 'sign in' or cmd.lower() == 'open':
+            flag = 'website'
+            break
+        elif cmd.lower() == 'get data' or cmd.lower() == 'data':
+            flag = 'data'
+            break
+        else:
+            format_print(cmd)
     print('\nPass in \'e\' or \'end\' to terminate the program.')
     cmd = input('\nEnter your command here: ')
     while cmd is None or cmd not in input_commands.keys():
