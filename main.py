@@ -35,7 +35,7 @@ class Jarvis:
 
 def format_print(command=None):
     if command is None or command not in input_commands.keys():
-        print('\nPlease pass in a valid command')
+        print('\nPlease pass in a valid command. Read the instructions again.')
         return
 
     print(f'Command that was passed: {ctc(command)}')
@@ -60,10 +60,10 @@ if __name__ == '__main__':
             flag = 'data'
             break
         else:
-            format_print(cmd)
+            format_print()
             cmd = input('\nEnter your choice here: ')
             continue
-    print('\nPass in \'e\' or \'end\' to terminate the program.')
+    print('\nYou can now pass in your commands.\nPass in \'e\' or \'end\' to terminate the program.')
     cmd = input('\nEnter your command here: ')
     while cmd is None or cmd not in input_commands.keys():
         format_print()
