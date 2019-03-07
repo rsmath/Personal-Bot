@@ -9,7 +9,7 @@ import pandas as pd
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 from helpers import commands  # to convert link to command
-from links import SCHOOL, CONST_EMAILS, BLOGS
+from links import SCHOOL, CONST_EMAILS, BLOGS, SOCIAL_MEDIA
 
 
 class Websites:
@@ -89,6 +89,7 @@ class Websites:
         time.sleep(2)
         click_login = self.driver.find_element_by_link_text('Log in')
         click_login.click()
+        time.sleep(1)
         give_username = self.driver.find_element_by_class_name('js-username-field')
         give_username.send_keys(self.file.iloc[0, 1])
         time.sleep(2)
@@ -196,4 +197,4 @@ def mail_action(driver, url, email, password):
 
 if __name__ == '__main__':
     website = Websites()
-    website.sign_in(CONST_EMAILS)
+    website.sign_in(SOCIAL_MEDIA[0])
