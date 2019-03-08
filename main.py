@@ -56,11 +56,11 @@ if __name__ == '__main__':
         if cmd.lower().replace(' ', '') == 'sign in' or cmd.lower().replace(' ', '') == 'open':  # removing the spaces
             flag = 'website'
             break
-        elif cmd.lower() == 'get data' or cmd.lower() == 'data':
+        elif cmd.lower().replace(' ', '') == 'get data' or cmd.lower().replace(' ', '') == 'data':
             flag = 'data'
             break
         else:
-            format_print()
+            print('\nSorry')
             cmd = input('\nEnter your choice here: ')
             continue
 
