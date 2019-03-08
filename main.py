@@ -53,7 +53,7 @@ if __name__ == '__main__':
     cmd = input('\nEnter your choice here: ')
     flag = None
     while cmd is not None and cmd != '':  # not empty and not None, meaning a typo
-        if cmd.lower() == 'sign in' or cmd.lower() == 'open':
+        if cmd.lower().replace(' ', '') == 'sign in' or cmd.lower().replace(' ', '') == 'open':  # removing the spaces
             flag = 'website'
             break
         elif cmd.lower() == 'get data' or cmd.lower() == 'data':
