@@ -51,7 +51,7 @@ if __name__ == '__main__':
           '\'data\' to obtain the data from the forums.')
 
     cmd = input('\nEnter your choice here: ')
-    flag = None
+    flag = None  # holds whether the param is to sign in or get the data
     while cmd is not None and cmd != '':  # not empty and not None, meaning a typo
         if cmd.lower().replace(' ', '') == 'sign in' or cmd.lower().replace(' ', '') == 'open':  # removing the spaces
             flag = 'website'
@@ -60,7 +60,7 @@ if __name__ == '__main__':
             flag = 'data'
             break
         else:
-            print('\nSorry')
+            print(f'\nSorry, the choice: {cmd.lower()}, was not recognized. Please try again.')
             cmd = input('\nEnter your choice here: ')
             continue
 
