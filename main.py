@@ -68,6 +68,7 @@ if __name__ == '__main__':
         print('\nYou have chosen to sign into websites by passing None into the choice above. To change that choice,'
               'please terminate and restart the program')
 
+    cmd = input('Would you like to see the available commands: ')
     print('\nYou can now pass in your commands.\nPass in \'e\' or \'end\' to terminate the program.')
     cmd = input('\nEnter your command here: ')
     while cmd is None or cmd not in input_commands.keys():

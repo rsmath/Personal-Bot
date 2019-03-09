@@ -41,8 +41,8 @@ class Data:
         pass
 
     def get_twitter(self, param=None):
-        # TODO : get data such as number of followers and following, a few of their names, also some of the tweets from my
-        #  favorite twitter accounts
+        # TODO : get data such as number of followers and following, a few of their names, also some of the tweets from
+        #  my favorite twitter accounts
         pass
 
     def get_linkedin(self, param=None):
