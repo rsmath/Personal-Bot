@@ -53,19 +53,20 @@ if __name__ == '__main__':
     cmd = input('\nEnter your choice here: ')
     flag = None  # holds whether the param is to sign in or get the data
     while cmd is not None and cmd != '':  # not empty and not None, meaning a typo
-        if cmd.lower().replace(' ', '') == 'sign in' or cmd.lower().replace(' ', '') == 'open':  # removing the spaces
+        if cmd.lower().replace(' ', '') == 'signin' or cmd.lower().replace(' ', '') == 'open':  # removing the spaces
             flag = 'website'
             break
-        elif cmd.lower().replace(' ', '') == 'get data' or cmd.lower().replace(' ', '') == 'data':
+        elif cmd.lower().replace(' ', '') == 'getdata' or cmd.lower().replace(' ', '') == 'data':  # removing spaces
             flag = 'data'
             break
         else:
-            print(f'\nSorry, the choice: {cmd.lower()}, was not recognized. Please try again.')
+            print(f'\nSorry, the choice: \'{cmd.lower()}\' was not recognized. Please try again.')
             cmd = input('\nEnter your choice here: ')
             continue
 
-    print('\nYou have chosen to sign into websites by passing None into the choice above. To change that choice,'
-          'please terminate and restart the program')
+    if cmd is not None and flag == 'website':
+        print('\nYou have chosen to sign into websites by passing None into the choice above. To change that choice,'
+              'please terminate and restart the program')
 
     print('\nYou can now pass in your commands.\nPass in \'e\' or \'end\' to terminate the program.')
     cmd = input('\nEnter your command here: ')
