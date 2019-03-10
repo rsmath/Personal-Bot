@@ -10,6 +10,7 @@ from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 from helpers import commands  # to convert link to command
 from links import SCHOOL, CONST_EMAILS, BLOGS, SOCIAL_MEDIA
+import os  # going to be used later
 
 
 class Websites:
