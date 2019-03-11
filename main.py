@@ -38,7 +38,7 @@ def format_print(command=None):
         print('\nPlease pass in a valid command. Read the instructions again.')
         return
 
-    print(f'Command that was passed: {ctc(command)}')
+    print(f'\nCommand that was passed: {ctc(command)}')
 
 
 if __name__ == '__main__':
@@ -64,7 +64,7 @@ if __name__ == '__main__':
         else:
             print(f'\nSorry, the choice: \'{cmd.lower()}\' was not recognized. Please try again.')
             cmd = input('\nEnter your choice here: ')
-            continue
+            # continue
 
     if cmd == '':  # if passed in nothing aka ''
         flag = 'website'
@@ -77,7 +77,7 @@ if __name__ == '__main__':
         cmd = input('\nWould you like to see the available commands (y/n): ')
 
     if cmd.lower() == 'y':
-        print(input_commands)
+        print('\n' + str(input_commands))
 
     print('\nYou can now pass in your commands, either for signing in or getting the data.\nPass in \'e\' or \'end\' to'
           ' terminate the program.')
@@ -88,7 +88,12 @@ if __name__ == '__main__':
         cmd = input('\nEnter your command here: ')
 
     while cmd.lower() != 'end' and cmd.lower() != 'e':
-        format_print(cmd)
+        if cmd.lower() not in input_commands.keys():
+            format_print(cmd)  # not 'end' or 'e', but a command typo
+            cmd = input('\nEnter your command here: ')  # redefining the command
+            continue
+
+        format_print(cmd)  # need to let the user know of the command anyway
         Bot.begin(cmd, choice=flag)
         cmd = input('\nEnter your command here: ')
 
