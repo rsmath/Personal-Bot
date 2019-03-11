@@ -72,7 +72,7 @@ if __name__ == '__main__':
               ' please terminate and restart the program')
 
     cmd = input('\nWould you like to see the available commands (y/n): ')
-    while cmd.lower() not in 'yn':
+    while cmd.lower() not in 'yn' or cmd == '':
         print('\nPlease either pass in \'y\' or \'n\'')
         cmd = input('\nWould you like to see the available commands (y/n): ')
 
