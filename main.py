@@ -66,7 +66,8 @@ if __name__ == '__main__':
             cmd = input('\nEnter your choice here: ')
             continue
 
-    if cmd == '' and flag == 'website':  # if passed in nothing aka ''
+    if cmd == '':  # if passed in nothing aka ''
+        flag = 'webiste'
         print('\nYou have chosen to sign into websites by passing None into the choice above. To change that choice,'
               'please terminate and restart the program')
 
