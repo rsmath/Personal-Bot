@@ -52,7 +52,7 @@ if __name__ == '__main__':
 
     cmd = input('\nEnter your choice here: ')
     flag = None  # holds whether the param is to sign in or get the data
-    while cmd is not None and cmd != '':  # not empty and not None, meaning a typo
+    while cmd != '':  # not empty and not None, meaning a typo
         if cmd.lower().replace(' ', '') == 'signin' or cmd.lower().replace(' ', '') == 'open':  # removing the spaces
             flag = 'website'
             break
@@ -63,6 +63,7 @@ if __name__ == '__main__':
             print(f'\nSorry, the choice: \'{cmd.lower()}\' was not recognized. Please try again.')
             cmd = input('\nEnter your choice here: ')
             continue
+
 
     if cmd is not None and flag == 'website':
         print('\nYou have chosen to sign into websites by passing None into the choice above. To change that choice,'
