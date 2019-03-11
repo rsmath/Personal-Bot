@@ -83,7 +83,7 @@ if __name__ == '__main__':
           ' terminate the program.')
 
     cmd = input('\nEnter your command here: ')
-    while cmd is None or cmd not in input_commands.keys():
+    while cmd == '' or cmd not in input_commands.keys():  # cannot be empty and has to be recognized
         format_print()
         cmd = input('\nEnter your command here: ')
 
