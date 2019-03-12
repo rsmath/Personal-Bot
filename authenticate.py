@@ -152,6 +152,7 @@ class Websites:
             mail_action(self.driver, self.url, email, password)
             email, password = self.file.iloc[6, 1], self.file.iloc[6, 2]  # update
             time.sleep(2)
+            self.url = CONST_EMAILS[1]  # next email
             self.driver.execute_script(f'window.open({self.url}, "_blank");')
             mail_action(self.driver, self.url, email, password)  # second email
             email, password = self.file.iloc[7, 1], self.file.iloc[7, 2]  # update
