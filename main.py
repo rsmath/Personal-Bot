@@ -5,7 +5,6 @@
     Interacting with website : selenium
 
     The begin() function will not only sign into websites, but also get the respective data from a url in the terminal.
-    Getting data is second priority, to be focused on later, primary focus to open and sign into links.
 """
 
 from authenticate import Websites
