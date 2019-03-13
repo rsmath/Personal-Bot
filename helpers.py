@@ -4,6 +4,7 @@
 
 from links import CONST_EMAILS, SOCIAL_MEDIA, CODING_MEDIA, LINKEDIN, BLOGS, SCHOOL
 
+
 '''MAKE THE COMMANDS DICTIONARY CLASSWIDE OBJECT SO IT CAN BE ACCESSED BY OTHER MODULES'''
 
 commands = {
@@ -56,10 +57,8 @@ input_commands = {
     "school news": 'sciencesurvey',
 }
 
-
 def command_to_link(comm):
     return commands[comm.lower()]
-
 
 def convert_to_command(comm):
     return input_commands[comm.lower()]
