@@ -85,7 +85,6 @@ class Data:
 def check_res(res):
     try:
         res.raise_for_status()
-        print('response worked right')
 
     except Exception as exc:
         return '\nThere was a problem: %s\nPlease try giving the command again\n' % exc
