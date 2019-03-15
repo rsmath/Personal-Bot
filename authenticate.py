@@ -91,6 +91,7 @@ class Websites:
         click_login.click()
         time.sleep(1)
         give_username = self.driver.find_element_by_name('session[username_or_email]')
+        print(type(give_username))
         give_username.send_keys('bla')
         time.sleep(2)
         give_password = self.driver.find_element_by_name('session[password]')
