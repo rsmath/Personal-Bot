@@ -1,6 +1,17 @@
 # PROJECT DESCRIPTION
 
 
+#### Update as of March 17, 2019
+
+
+
+
+Due to upcoming exams in my senior year of high school, I will be putting the development of the Personal-Bot project on hold for a few weeks. Hopefully, I will be able to resume again, this time finally finishing up the core features of the project.
+
+
+
+
+
 
 
 ## Introduction
